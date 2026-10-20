@@ -4,15 +4,14 @@ import { Star, Quote, Sparkles } from 'lucide-react'
 interface Depoimento {
   id: string
   nome: string
-  bairro: string
   texto: string
   estrelas: number
-  tempo: string
 }
 
 export const SocialProofSection: React.FC = () => {
+  const [countPilates, setCountPilates] = useState(0)
+  const [countEdFisica, setCountEdFisica] = useState(0)
   const [countAlunos, setCountAlunos] = useState(0)
-  const [countAnos, setCountAnos] = useState(0)
   const [countSat, setCountSat] = useState(0)
 
   // Animação suave dos números ao carregar
@@ -26,8 +25,9 @@ export const SocialProofSection: React.FC = () => {
       currentStep++
       const progress = Math.min(currentStep / steps, 1)
 
+      setCountPilates(Math.floor(progress * 20))
+      setCountEdFisica(Math.floor(progress * 23))
       setCountAlunos(Math.floor(progress * 500))
-      setCountAnos(Math.floor(progress * 12))
       setCountSat(Math.floor(progress * 98))
 
       if (currentStep >= steps) {
@@ -41,30 +41,29 @@ export const SocialProofSection: React.FC = () => {
   const depoimentos: Depoimento[] = [
     {
       id: '1',
-      nome: 'Camila Peixoto',
-      bairro: 'Fonseca, Niterói',
+      nome: 'Flávia M.',
       texto:
-        'Cheguei ao BASE 6 travada por uma dor lombar crônica. O olhar atento da Drica e a paciência nos exercícios devolveram minha mobilidade e a alegria de me movimentar sem medo.',
+        'Melhor espaço de pilates de Niterói.  Professores atenciosos e muito competentes. A Adriana é sensacional! Eu e minha família somos fãs!!',
       estrelas: 5,
-      tempo: 'Aluna há 2 anos',
     },
     {
       id: '2',
-      nome: 'Eduardo Martins',
-      bairro: 'Icaraí, Niterói',
-      texto:
-        'A estrutura é impecável e o ambiente muito acolhedor. A combinação de Pilates com a plataforma vibratória me deu uma disposição física que eu não tinha há anos.',
+      nome: 'Liane S.',
+      texto: 'Lugar maravilhoso, professora espetacular, ambiente acolhedor. Super recomendo.',
       estrelas: 5,
-      tempo: 'Aluno há 8 meses',
     },
     {
       id: '3',
-      nome: 'Helena Vasconcelos',
-      bairro: 'Santa Rosa, Niterói',
+      nome: 'Tania M. G.',
       texto:
-        'Não é só sobre exercício, é sobre cuidado de verdade. A Drica adapta cada detalhe à sua respiração e limitações. Me sinto ouvida, respeitada e muito mais forte.',
+        'Experiência gratificante. Profissionais de qualidade. Espaço amplo. Base 6 Studio merece nota 10.',
       estrelas: 5,
-      tempo: 'Aluna há 1 ano e meio',
+    },
+    {
+      id: '4',
+      nome: 'Vera L.',
+      texto: 'Ambiente agradabilíssimo, com uma instrutora mais do que capacitada e muito amiga.',
+      estrelas: 5,
     },
   ]
 
@@ -90,42 +89,60 @@ export const SocialProofSection: React.FC = () => {
         </div>
 
         {/* Números em Destaque (Contadores Animados) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic">
-            <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
-              {countAlunos}+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic flex flex-col justify-between">
+            <div>
+              <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
+                {countPilates} anos
+              </div>
+              <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">de Pilates</p>
             </div>
-            <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">
-              Alunos atendidos
-            </p>
-            <p className="text-xs text-[#2E5E4E]">Vidas transformadas pelo movimento consciente</p>
-          </div>
-
-          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic">
-            <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
-              {countAnos} anos
-            </div>
-            <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">
-              De experiência clínica
-            </p>
-            <p className="text-xs text-[#2E5E4E]">
-              Prática cinesiológica e aperfeiçoamento contínuo
+            <p className="text-xs text-[#2E5E4E] mt-1">
+              Prática dedicada e aperfeiçoamento constante
             </p>
           </div>
 
-          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic">
-            <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
-              {countSat}%
+          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic flex flex-col justify-between">
+            <div>
+              <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
+                {countEdFisica} anos
+              </div>
+              <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">
+                como Profissional de Educação Física
+              </p>
             </div>
-            <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">De satisfação</p>
-            <p className="text-xs text-[#2E5E4E]">
+            <p className="text-xs text-[#2E5E4E] mt-1">Com foco na melhor idade</p>
+          </div>
+
+          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic flex flex-col justify-between">
+            <div>
+              <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
+                {countAlunos}+
+              </div>
+              <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">alunos</p>
+            </div>
+            <p className="text-xs text-[#2E5E4E] mt-1">
+              Vidas transformadas pelo movimento consciente
+            </p>
+          </div>
+
+          <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic flex flex-col justify-between">
+            <div>
+              <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
+                {countSat}%
+              </div>
+              <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">
+                de satisfação
+              </p>
+            </div>
+            <p className="text-xs text-[#2E5E4E] mt-1">
               Relato espontâneo de alívio e qualidade de vida
             </p>
           </div>
         </div>
 
         {/* Cards de Depoimento */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
           {depoimentos.map((dep) => (
             <div
               key={dep.id}
@@ -154,10 +171,10 @@ export const SocialProofSection: React.FC = () => {
               <div className="pt-4 border-t border-gray-100 flex items-center justify-between">
                 <div>
                   <h4 className="font-heading font-semibold text-sm text-[#1F3D33]">{dep.nome}</h4>
-                  <p className="text-xs text-[#7FAF9C]">{dep.bairro}</p>
+                  <p className="text-xs text-[#7FAF9C]">Aluno(a) BASE 6 STUDIO</p>
                 </div>
                 <span className="text-[11px] font-heading font-semibold text-[#2E5E4E] bg-[#EAF2EF] px-2.5 py-1 rounded-full">
-                  {dep.tempo}
+                  Avaliação 5 estrelas
                 </span>
               </div>
             </div>
