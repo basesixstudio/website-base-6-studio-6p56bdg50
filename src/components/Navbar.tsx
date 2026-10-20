@@ -39,9 +39,7 @@ export const Navbar: React.FC = () => {
     setMobileMenuOpen(false)
   }
 
-  const agendarUrl = getWhatsAppLink(
-    'Olá, Drica! Quero agendar uma aula experimental no BASE 6 STUDIO.',
-  )
+  const agendarUrl = getWhatsAppLink()
 
   return (
     <header

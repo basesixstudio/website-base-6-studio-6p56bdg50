@@ -10,10 +10,10 @@ export const ADDRESS_SHORT = 'Fonseca, Niterói — RJ'
 export const RAZAO_SOCIAL = 'A Mello de Lima Centro de Condicionamento Físico LTDA ME'
 export const CNPJ_DISPLAY = '69.476.157/0001-94'
 export const SLOGAN_PRINCIPAL = 'Uma base. Seis princípios.'
+export const MENSAGEM_AGENDAMENTO_PADRAO =
+  'Olá! Vim pelo site do BASE 6 STUDIO e gostaria de agendar uma aula experimental. 🌿'
 
-export function getWhatsAppLink(
-  mensagem = 'Olá, Drica! Quero agendar uma aula experimental no BASE 6 STUDIO.',
-) {
+export function getWhatsAppLink(mensagem = MENSAGEM_AGENDAMENTO_PADRAO) {
   return `${WHATSAPP_URL}?text=${encodeURIComponent(mensagem)}`
 }
 

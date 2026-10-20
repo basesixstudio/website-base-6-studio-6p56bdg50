@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react'
 import { getWhatsAppLink } from './StudioLogo'
 
 export const FloatingWhatsApp: React.FC = () => {
-  const url = getWhatsAppLink('Olá, Drica! Quero agendar uma aula experimental.')
+  const url = getWhatsAppLink()
 
   return (
     <aside aria-label="Atendimento via WhatsApp" className="fixed bottom-6 right-6 z-50 group">

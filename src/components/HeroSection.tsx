@@ -4,9 +4,7 @@ import { getWhatsAppLink, SLOGAN_PRINCIPAL } from '@/components/StudioLogo'
 import dricaFoto from '@/assets/dricaacenando-e2c88.png'
 
 export const HeroSection: React.FC = () => {
-  const agendarUrl = getWhatsAppLink(
-    'Olá, Drica! Quero agendar uma aula experimental no BASE 6 STUDIO.',
-  )
+  const agendarUrl = getWhatsAppLink()
 
   const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
