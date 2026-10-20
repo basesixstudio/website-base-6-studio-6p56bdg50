@@ -54,11 +54,11 @@ export const Navbar: React.FC = () => {
         {/* Logo oficial */}
         <Link
           to="/#inicio"
-          className="transition-transform hover:scale-[1.02] active:scale-95 flex items-center gap-2"
+          className="transition-transform hover:scale-[1.02] active:scale-95 flex items-center gap-2 shrink-0"
           aria-label="BASE 6 STUDIO - Página inicial"
         >
           <StudioLogo />
-          <span className="hidden lg:inline text-xs font-heading font-medium text-[#7FAF9C] pl-2 border-l border-[#A0A0A0]/30 tracking-tight">
+          <span className="hidden lg:inline text-xs font-heading font-medium text-[#7FAF9C] pl-2 border-l border-[#A0A0A0]/30 tracking-tight whitespace-nowrap">
             {SLOGAN_PRINCIPAL}
           </span>
         </Link>

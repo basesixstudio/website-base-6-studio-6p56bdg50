@@ -51,18 +51,26 @@ export const StudioLogo: React.FC<StudioLogoProps> = ({
       </div>
 
       {!iconOnly && (
-        <div className="flex flex-col leading-none text-left">
+        <div className="flex items-baseline whitespace-nowrap leading-none text-left select-none">
           <span
-            className={`font-heading font-bold tracking-tight ${
-              size === 'lg' ? 'text-2xl' : size === 'sm' ? 'text-lg' : 'text-xl'
+            className={`font-heading font-bold tracking-tight whitespace-nowrap ${
+              size === 'lg'
+                ? 'text-2xl sm:text-3xl'
+                : size === 'sm'
+                  ? 'text-base sm:text-lg'
+                  : 'text-lg sm:text-xl'
             } ${isInverted ? 'text-white' : 'text-[#2E5E4E]'}`}
           >
-            BASE 6
+            BASE&nbsp;6
           </span>
           <span
-            className={`font-heading text-[10px] tracking-[0.28em] font-semibold uppercase mt-0.5 ${
-              isInverted ? 'text-[#7FAF9C]' : 'text-[#1F3D33]/70'
-            }`}
+            className={`font-heading font-semibold uppercase tracking-[0.22em] ml-1.5 sm:ml-2 whitespace-nowrap ${
+              size === 'lg'
+                ? 'text-xs sm:text-sm'
+                : size === 'sm'
+                  ? 'text-[10px] sm:text-xs'
+                  : 'text-[11px] sm:text-xs'
+            } ${isInverted ? 'text-[#7FAF9C]' : 'text-[#1F3D33]/75'}`}
           >
             STUDIO
           </span>
