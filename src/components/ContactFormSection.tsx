@@ -12,7 +12,7 @@ import {
 import { criarContato, type NecessidadeTipo } from '@/services/contatos'
 import { useToast } from '@/hooks/use-toast'
 import { getWhatsAppLink, WHATSAPP_DISPLAY, EMAIL_DISPLAY } from '@/components/StudioLogo'
-import dricaFoto from '@/assets/dricaacenando-e2c88.png'
+import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
   'Pilates',
@@ -117,9 +117,9 @@ export const ContactFormSection: React.FC = () => {
             <div className="p-5 rounded-2xl bg-[#F4F8F6] border border-[#7FAF9C]/40 flex items-start gap-3.5 shadow-xs">
               <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5 bg-[#2E5E4E]/10">
                 <img
-                  src={dricaFoto}
-                  alt="Drica"
-                  className="w-full h-full object-cover object-[24%_10%] scale-[1.3] origin-[25%_15%]"
+                  src={dricaInsightFoto}
+                  alt="Dica da Drica - Porta-voz oficial"
+                  className="w-full h-full object-cover object-[50%_15%]"
                 />
               </div>
               <div className="flex flex-col gap-1">
