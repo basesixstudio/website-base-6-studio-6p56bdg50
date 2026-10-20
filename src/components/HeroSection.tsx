@@ -65,11 +65,11 @@ export const HeroSection: React.FC = () => {
             {/* Fala da Drica (Porta-Voz Oficial) - Acolhedora, Didática e Encorajadora */}
             <div className="flex items-start gap-3.5 p-4 sm:p-4.5 rounded-2xl bg-white/95 border border-[#7FAF9C]/40 shadow-subtle max-w-xl">
               <div className="relative shrink-0">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E5E4E] shadow-xs">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E5E4E] shadow-xs bg-[#2E5E4E]/10">
                   <img
                     src={dricaFoto}
                     alt="Drica - Porta-voz oficial do BASE 6 STUDIO"
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[24%_10%] scale-[1.3] origin-[25%_15%]"
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#2E5E4E] text-white p-0.5 rounded-full shadow-xs">
@@ -78,7 +78,7 @@ export const HeroSection: React.FC = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-xs font-bold font-heading text-[#2E5E4E] uppercase tracking-wider">
-                  Drica • Porta-voz & Fisioterapeuta
+                  Drica • Porta-voz & Profissional de Educação Física
                 </span>
                 <p className="text-sm text-[#1F3D33] mt-0.5 leading-relaxed">
                   "Olá! Sou a Drica. Aqui no BASE 6 STUDIO, cada corpo tem sua história e cada
@@ -134,15 +134,18 @@ export const HeroSection: React.FC = () => {
 
               {/* Card principal com a foto oficial da Drica */}
               <div className="relative z-10 w-full overflow-hidden rounded-[32px] border-2 border-white shadow-organic bg-white group">
-                <img
-                  src={dricaFoto}
-                  alt="Drica, porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates"
-                  className="w-full h-auto max-h-[540px] object-cover object-center select-none transition-transform duration-500 group-hover:scale-[1.02]"
-                  loading="eager"
-                />
+                {/* Contêiner de recorte para ocultar elementos embutidos na imagem (endereço sobreposto e marca BASE 6 no rodapé direito) */}
+                <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-[#2E5E4E]/5">
+                  <img
+                    src={dricaFoto}
+                    alt="Drica, porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates"
+                    className="w-full h-full object-cover object-[24%_12%] scale-[1.28] origin-[25%_22%] select-none transition-transform duration-500 group-hover:scale-[1.31]"
+                    loading="eager"
+                  />
+                </div>
 
                 {/* Slogan complementar sobreposto na base da foto */}
-                <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#1F3D33]/90 via-[#1F3D33]/60 to-transparent text-white pt-10">
+                <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#1F3D33]/95 via-[#1F3D33]/75 to-transparent text-white pt-12">
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="font-heading font-bold text-sm text-white">Drica no Reformer</p>

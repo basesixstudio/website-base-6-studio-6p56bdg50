@@ -115,11 +115,11 @@ export const ContactFormSection: React.FC = () => {
 
             {/* Balão informativo Dica da Drica */}
             <div className="p-5 rounded-2xl bg-[#F4F8F6] border border-[#7FAF9C]/40 flex items-start gap-3.5 shadow-xs">
-              <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5">
+              <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5 bg-[#2E5E4E]/10">
                 <img
                   src={dricaFoto}
                   alt="Drica"
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-[24%_10%] scale-[1.3] origin-[25%_15%]"
                 />
               </div>
               <div className="flex flex-col gap-1">
