@@ -3,6 +3,7 @@ import { HeroSection } from '@/components/HeroSection'
 import { ServicesSection } from '@/components/ServicesSection'
 import { PrinciplesSection } from '@/components/PrinciplesSection'
 import { SocialProofSection } from '@/components/SocialProofSection'
+import { DricasVideoSection } from '@/components/DricasVideoSection'
 import { ContactFormSection } from '@/components/ContactFormSection'
 
 const Index: React.FC = () => {
@@ -11,7 +12,7 @@ const Index: React.FC = () => {
       {/* 1. Página de apresentação (Hero com proposta de valor, Drica e Reformer) */}
       <HeroSection />
 
-      {/* 2. Serviços em destaque (8 modalidades da base) */}
+      {/* 2. Serviços em destaque */}
       <ServicesSection />
 
       {/* 3. Os Seis Princípios do Método Pilates (Powerhouse, Respiração, Concentração, Controle, Precisão, Fluidez) */}
@@ -20,7 +21,10 @@ const Index: React.FC = () => {
       {/* 4. Prova social (depoimentos, contadores animados, frase Drica) */}
       <SocialProofSection />
 
-      {/* 5. Formulário de contato (salvando na coleção contatos do PocketBase) */}
+      {/* 5. Seção de vídeo "Dicas da Drica" (YouTube embed fAXWaW8qzto) */}
+      <DricasVideoSection />
+
+      {/* 6. Formulário de contato ("Diga um oi para a Drica" + dica escrita) */}
       <ContactFormSection />
     </div>
   )

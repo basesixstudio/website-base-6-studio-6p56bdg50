@@ -75,6 +75,11 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="/#dicas-da-drica" className="hover:text-[#7FAF9C] transition-colors">
+                  Dicas da Drica
+                </a>
+              </li>
+              <li>
                 <a href="/#contato" className="hover:text-[#7FAF9C] transition-colors">
                   Fale com a Drica
                 </a>
