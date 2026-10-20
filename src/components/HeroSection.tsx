@@ -143,21 +143,6 @@ export const HeroSection: React.FC = () => {
                     loading="eager"
                   />
                 </div>
-
-                {/* Slogan complementar sobreposto na base da foto */}
-                <div className="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-[#1F3D33]/95 via-[#1F3D33]/75 to-transparent text-white pt-12">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-heading font-bold text-sm text-white">Drica no Reformer</p>
-                      <p className="text-[11px] text-[#7FAF9C] font-medium">
-                        "Aqui, movimento, saúde e cuidado caminham juntos."
-                      </p>
-                    </div>
-                    <span className="px-2.5 py-1 rounded-full bg-[#2E5E4E]/80 backdrop-blur-xs text-[10px] font-heading font-bold tracking-wider uppercase text-white border border-[#7FAF9C]/40">
-                      Base 6
-                    </span>
-                  </div>
-                </div>
               </div>
 
               {/* Badge flutuante destacando Fonseca • Niterói */}
