@@ -26,58 +26,64 @@ export const ServicesSection: React.FC = () => {
       id: 'pilates',
       titulo: 'Pilates Contemporâneo',
       descricao:
-        'Método moderno que fortalece o corpo e melhora a postura com movimentos fluidos e conscientes.',
-      icone: <Activity className="w-6 h-6 text-[#2E7D32]" />,
+        'Método moderno que fortalece o corpo, aprimora a postura e alinha consciência motora com movimentos fluidos.',
+      icone: <Activity className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Principal',
     },
     {
       id: 'condicionamento',
       titulo: 'Condicionamento Físico',
-      descricao: 'Treinos que aumentam resistência, força e disposição para o dia a dia.',
-      icone: <Dumbbell className="w-6 h-6 text-[#2E7D32]" />,
+      descricao:
+        'Treinos integrados que desenvolvem força funcional, estabilidade articular e vitalidade para o seu cotidiano.',
+      icone: <Dumbbell className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Energia',
     },
     {
       id: 'fisioterapia',
-      titulo: 'Fisioterapia (Pilates Clínico)',
-      descricao: 'Reabilitação orientada por fisioterapeuta para tratar dores e prevenir lesões.',
-      icone: <Stethoscope className="w-6 h-6 text-[#2E7D32]" />,
+      titulo: 'Fisioterapia & Pilates Clínico',
+      descricao:
+        'Reabilitação cinesiológica orientada por fisioterapeuta para tratamento de dores crônicas e prevenção de lesões.',
+      icone: <Stethoscope className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Reabilitação',
     },
     {
       id: 'plataforma',
       titulo: 'Plataforma Vibratória (WBV)',
       descricao:
-        'Treino de corpo inteiro em vibração que potencializa resultados e alivia tensões.',
-      icone: <Zap className="w-6 h-6 text-[#2E7D32]" />,
+        'Recurso transversal em vibração de corpo inteiro que potencializa resultados de força, drenagem e alívio de tensões.',
+      icone: <Zap className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Tecnologia',
     },
     {
       id: 'avaliacoes',
       titulo: 'Avaliações Físicas',
-      descricao: 'Diagnóstico completo para montar um plano sob medida para você.',
-      icone: <ClipboardCheck className="w-6 h-6 text-[#2E7D32]" />,
+      descricao:
+        'Diagnóstico postural e biomecânico completo para estruturar um plano de cuidado individualizado para você.',
+      icone: <ClipboardCheck className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Diagnóstico',
     },
     {
       id: 'experimentais',
       titulo: 'Aulas Experimentais',
-      descricao: 'Experimente antes de decidir. Sem compromisso, com toda a acolhida.',
-      icone: <CalendarCheck2 className="w-6 h-6 text-[#2E7D32]" />,
-      tag: 'Comece Já',
+      descricao:
+        'Vivencie o método no estúdio sem compromisso: acolhimento desde o primeiro minuto com nossa equipe.',
+      icone: <CalendarCheck2 className="w-6 h-6 text-[#2E5E4E]" />,
+      tag: 'Primeiro Passo',
     },
     {
       id: 'planos',
       titulo: 'Planos Flexíveis',
-      descricao: 'Mensal, trimestral, semestral ou anual. Escolha o que cabe no seu momento.',
-      icone: <Layers className="w-6 h-6 text-[#2E7D32]" />,
+      descricao:
+        'Modalidades mensais, trimestrais, semestrais ou anuais planejadas para acompanhar sua rotina com tranquilidade.',
+      icone: <Layers className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Liberdade',
     },
     {
       id: 'acessorios',
-      titulo: 'Acessórios & Meias Antiderrapantes',
-      descricao: 'Venda de meias e acessórios para melhorar sua prática com conforto e segurança.',
-      icone: <ShoppingBag className="w-6 h-6 text-[#2E7D32]" />,
+      titulo: 'Acessórios & Meias Especiais',
+      descricao:
+        'Meias antiderrapantes e acessórios selecionados para você praticar com máximo conforto, aderência e segurança.',
+      icone: <ShoppingBag className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Conforto',
     },
   ]
@@ -87,16 +93,18 @@ export const ServicesSection: React.FC = () => {
       <div className="container mx-auto max-w-6xl px-4">
         {/* Cabeçalho da Seção */}
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold uppercase tracking-wider mb-3">
-            O que oferecemos
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EAF2EF] text-[#2E5E4E] text-xs font-heading font-semibold uppercase tracking-wider mb-3 border border-[#7FAF9C]/30">
+            Nossas Modalidades
           </div>
-          <h2 className="font-serif italic font-bold text-3xl sm:text-4xl text-[#1B3A1B] leading-tight">
-            Cuidado integral, do primeiro alívio à sua melhor versão.
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
+            Cuidado integral, do alívio da dor à sua melhor versão.
           </h2>
-          <p className="font-serif italic text-base text-[#4A7C59] mt-3">
-            "Aqui unimos a ciência da reabilitação à leveza do movimento. Encontre a modalidade
-            ideal para o seu corpo."
-            <span className="block not-italic text-xs font-bold text-[#2E7D32] mt-1">— Drica</span>
+          <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3">
+            "Aqui unimos a ciência do movimento ao calor humano. Do treino ao acompanhamento
+            clínico, encontre o espaço ideal para o seu momento."
+            <span className="block text-xs font-bold font-heading text-[#7FAF9C] mt-1 uppercase tracking-wider">
+              — Drica • Porta-voz BASE 6 STUDIO
+            </span>
           </p>
         </div>
 
@@ -110,42 +118,42 @@ export const ServicesSection: React.FC = () => {
             return (
               <div
                 key={servico.id}
-                className="group relative bg-[#F4F9F4] hover:bg-white rounded-[24px] p-6 border border-[#C8E6C9]/60 hover:border-[#81C784] shadow-xs hover:shadow-organic-lg transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+                className="group relative bg-[#F4F8F6] hover:bg-white rounded-[24px] p-6 border border-[#7FAF9C]/30 hover:border-[#2E5E4E] shadow-xs hover:shadow-organic-lg transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
               >
                 <div>
                   {/* Topo do Card com Ícone e Tag */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 rounded-2xl bg-white group-hover:bg-[#E8F5E9] flex items-center justify-center shadow-xs border border-[#C8E6C9]/40 transition-colors">
+                    <div className="w-12 h-12 rounded-2xl bg-white group-hover:bg-[#EAF2EF] flex items-center justify-center shadow-xs border border-[#7FAF9C]/30 transition-colors">
                       {servico.icone}
                     </div>
-                    <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-white text-[#4A7C59] border border-[#C8E6C9]/40">
+                    <span className="text-[11px] font-heading font-semibold px-2.5 py-0.5 rounded-full bg-white text-[#2E5E4E] border border-[#7FAF9C]/30">
                       {servico.tag}
                     </span>
                   </div>
 
-                  {/* Título */}
-                  <h3 className="font-serif italic font-bold text-xl text-[#1B3A1B] mb-2 group-hover:text-[#2E7D32] transition-colors">
+                  {/* Título com Montserrat */}
+                  <h3 className="font-heading font-bold text-lg sm:text-xl text-[#1F3D33] mb-2 group-hover:text-[#2E5E4E] transition-colors leading-snug">
                     {servico.titulo}
                   </h3>
 
-                  {/* Descrição */}
-                  <p className="text-sm text-[#1B3A1B]/75 leading-relaxed font-normal">
+                  {/* Descrição com Open Sans */}
+                  <p className="text-sm text-[#1F3D33]/80 leading-relaxed font-normal">
                     {servico.descricao}
                   </p>
                 </div>
 
                 {/* Link no rodapé do card */}
-                <div className="pt-6 mt-4 border-t border-[#C8E6C9]/40 flex items-center justify-between">
+                <div className="pt-6 mt-4 border-t border-[#7FAF9C]/20 flex items-center justify-between">
                   <a
                     href={whatsLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs font-bold text-[#2E7D32] group-hover:text-[#1B3A1B] inline-flex items-center gap-1 transition-colors"
+                    className="text-xs font-heading font-bold text-[#2E5E4E] group-hover:text-[#1F3D33] inline-flex items-center gap-1 transition-colors"
                   >
                     <span>Saber mais</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-[#7FAF9C]" />
                   </a>
-                  <span className="text-[10px] text-[#4A7C59]/60 font-semibold uppercase">
+                  <span className="text-[10px] font-heading text-[#A0A0A0] font-semibold uppercase tracking-wider">
                     Base 6
                   </span>
                 </div>
@@ -154,15 +162,15 @@ export const ServicesSection: React.FC = () => {
           })}
         </div>
 
-        {/* Rodapé da seção de serviços com convite acolhedor */}
-        <div className="mt-14 p-6 sm:p-8 rounded-[28px] bg-gradient-to-r from-[#E8F5E9] via-[#F4F9F4] to-[#E8F5E9] border border-[#C8E6C9] flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-          <div className="flex flex-col gap-1">
-            <h4 className="font-serif italic font-bold text-lg text-[#1B3A1B]">
-              Ficou em dúvida sobre qual atividade é melhor para você?
+        {/* Banner de apoio com convite acolhedor da Drica */}
+        <div className="mt-14 p-6 sm:p-8 rounded-[28px] bg-gradient-to-r from-[#EAF2EF] via-[#F4F8F6] to-[#EAF2EF] border border-[#7FAF9C]/40 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+          <div className="flex flex-col gap-1 max-w-xl">
+            <h4 className="font-heading font-bold text-lg sm:text-xl text-[#1F3D33]">
+              Ficou em dúvida sobre qual modalidade é a melhor para você?
             </h4>
-            <p className="text-sm text-[#4A7C59]">
-              Converse diretamente com a Drica. Faremos uma triagem carinhosa para indicar o treino
-              perfeito.
+            <p className="text-sm text-[#2E5E4E]">
+              Converse diretamente com a Drica. Faremos uma triagem cuidadosa para indicar o treino
+              ou o protocolo clínico sob medida para a sua saúde.
             </p>
           </div>
           <a
@@ -171,7 +179,7 @@ export const ServicesSection: React.FC = () => {
             )}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 bg-[#2E7D32] hover:bg-[#256629] text-white px-6 py-3 rounded-full text-sm font-semibold shadow-xs hover:shadow-md transition-all hover:scale-[1.02]"
+            className="shrink-0 bg-[#2E5E4E] hover:bg-[#1F3D33] text-white px-6 py-3 rounded-full text-sm font-heading font-semibold shadow-xs hover:shadow-md transition-all hover:scale-[1.02]"
           >
             Falar com a Drica
           </a>
@@ -180,3 +188,4 @@ export const ServicesSection: React.FC = () => {
     </section>
   )
 }
+export default ServicesSection

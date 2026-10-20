@@ -251,21 +251,21 @@ export const PainelContatos: React.FC = () => {
     switch (status) {
       case 'Novo':
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#C8E6C9] text-[#1B3A1B] border border-[#81C784]/60">
-            <span className="w-2 h-2 rounded-full bg-[#2E7D32] animate-pulse-subtle" />
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-heading font-bold bg-[#EAF2EF] text-[#2E5E4E] border border-[#7FAF9C]/60">
+            <span className="w-2 h-2 rounded-full bg-[#2E5E4E] animate-pulse-subtle" />
             Novo
           </span>
         )
       case 'Em contato':
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#FFF9C4] text-[#F57F17] border border-[#FFEE58]">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-heading font-bold bg-[#FFF9C4] text-[#F57F17] border border-[#FFEE58]">
             <Clock className="w-3 h-3" />
             Em contato
           </span>
         )
       case 'Convertido':
         return (
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#2E7D32] text-white shadow-xs">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-heading font-bold bg-[#2E5E4E] text-white shadow-xs">
             <CheckCircle className="w-3 h-3" />
             Convertido
           </span>
@@ -287,9 +287,9 @@ export const PainelContatos: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#F4F9F4] text-[#1B3A1B]">
+    <div className="min-h-screen bg-[#F4F8F6] text-[#1F3D33]">
       {/* Topbar do Painel */}
-      <header className="bg-white border-b border-[#C8E6C9] sticky top-0 z-30 shadow-xs">
+      <header className="bg-white border-b border-[#7FAF9C]/30 sticky top-0 z-30 shadow-xs">
         <div className="container mx-auto max-w-7xl px-4 py-3.5 flex items-center justify-between">
           <div className="flex items-center gap-4">
             <Link to="/" title="Ir para a página inicial" className="hover:opacity-90">
@@ -297,17 +297,17 @@ export const PainelContatos: React.FC = () => {
             </Link>
             <div className="hidden sm:block h-6 w-px bg-gray-200" />
             <div className="hidden sm:flex items-center gap-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#2E7D32] bg-[#E8F5E9] px-2.5 py-1 rounded-full">
+              <span className="text-xs font-heading font-bold uppercase tracking-wider text-[#2E5E4E] bg-[#EAF2EF] px-2.5 py-1 rounded-full">
                 Painel da Drica
               </span>
-              <span className="text-xs text-[#4A7C59]">Gestão de Contatos</span>
+              <span className="text-xs text-[#7FAF9C] font-medium">Gestão de Contatos</span>
             </div>
           </div>
 
           <div className="flex items-center gap-3">
             <button
               onClick={() => setModalNovoAberto(true)}
-              className="inline-flex items-center gap-1.5 bg-[#2E7D32] hover:bg-[#256629] text-white px-3.5 py-2 rounded-full text-xs font-semibold shadow-xs transition-colors"
+              className="inline-flex items-center gap-1.5 bg-[#2E5E4E] hover:bg-[#1F3D33] text-white px-3.5 py-2 rounded-full text-xs font-heading font-semibold shadow-xs transition-colors cursor-pointer"
             >
               <PlusCircle className="w-4 h-4" />
               <span className="hidden sm:inline">Novo Contato</span>
@@ -315,7 +315,7 @@ export const PainelContatos: React.FC = () => {
 
             <Link
               to="/"
-              className="hidden md:inline-flex items-center gap-1 text-xs text-[#4A7C59] hover:text-[#2E7D32] px-3 py-2 rounded-full hover:bg-[#E8F5E9]"
+              className="hidden md:inline-flex items-center gap-1 text-xs font-heading text-[#2E5E4E] hover:text-[#1F3D33] px-3 py-2 rounded-full hover:bg-[#EAF2EF]"
             >
               <ExternalLink className="w-3.5 h-3.5" />
               <span>Ver Site</span>
@@ -339,10 +339,10 @@ export const PainelContatos: React.FC = () => {
         <div className="mb-8">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <div>
-              <h1 className="font-serif italic font-bold text-3xl sm:text-4xl text-[#1B3A1B]">
+              <h1 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33]">
                 Contatos recebidos
               </h1>
-              <p className="text-sm text-[#4A7C59] mt-1">
+              <p className="text-sm text-[#2E5E4E] mt-1">
                 Acompanhe quem quer conhecer a base e transforme interessados em novos alunos.
               </p>
             </div>
@@ -350,7 +350,7 @@ export const PainelContatos: React.FC = () => {
             <div className="flex items-center gap-2">
               <button
                 onClick={carregarDados}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-[#C8E6C9] hover:bg-[#E8F5E9] text-xs font-semibold text-[#2E7D32] transition-colors shadow-xs"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white border border-[#7FAF9C]/40 hover:bg-[#EAF2EF] text-xs font-heading font-semibold text-[#2E5E4E] transition-colors shadow-xs cursor-pointer"
               >
                 <RefreshCw className={`w-3.5 h-3.5 ${carregando ? 'animate-spin' : ''}`} />
                 <span>Atualizar</span>
@@ -372,10 +372,10 @@ export const PainelContatos: React.FC = () => {
                 <span className="text-xs font-semibold text-[#1B3A1B]/70">Novos</span>
                 <span className="w-2.5 h-2.5 rounded-full bg-[#2E7D32] animate-pulse-subtle" />
               </div>
-              <div className="font-serif italic font-bold text-2xl sm:text-3xl text-[#2E7D32] mt-1">
+              <div className="font-heading font-bold text-2xl sm:text-3xl text-[#2E5E4E] mt-1">
                 {contagemNovos}
               </div>
-              <p className="text-[11px] text-[#4A7C59]">Aguardando primeiro contato</p>
+              <p className="text-[11px] text-[#7FAF9C]">Aguardando primeiro contato</p>
             </button>
 
             <button
@@ -385,17 +385,17 @@ export const PainelContatos: React.FC = () => {
               className={`p-4 rounded-2xl border text-left transition-all ${
                 filtroStatus === 'Em contato'
                   ? 'bg-[#FFF9C4] border-[#F57F17] shadow-sm'
-                  : 'bg-white border-[#C8E6C9]/60 hover:border-[#81C784]'
+                  : 'bg-white border-[#7FAF9C]/30 hover:border-[#7FAF9C]'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-[#1B3A1B]/70">Em contato</span>
+                <span className="text-xs font-semibold text-[#1F3D33]/70">Em contato</span>
                 <Clock className="w-4 h-4 text-[#F57F17]" />
               </div>
-              <div className="font-serif italic font-bold text-2xl sm:text-3xl text-[#F57F17] mt-1">
+              <div className="font-heading font-bold text-2xl sm:text-3xl text-[#F57F17] mt-1">
                 {contagemEmContato}
               </div>
-              <p className="text-[11px] text-[#4A7C59]">Conversando no WhatsApp</p>
+              <p className="text-[11px] text-[#7FAF9C]">Conversando no WhatsApp</p>
             </button>
 
             <button
@@ -404,18 +404,18 @@ export const PainelContatos: React.FC = () => {
               }
               className={`p-4 rounded-2xl border text-left transition-all ${
                 filtroStatus === 'Convertido'
-                  ? 'bg-[#E8F5E9] border-[#2E7D32] shadow-sm'
-                  : 'bg-white border-[#C8E6C9]/60 hover:border-[#81C784]'
+                  ? 'bg-[#EAF2EF] border-[#2E5E4E] shadow-sm'
+                  : 'bg-white border-[#7FAF9C]/30 hover:border-[#7FAF9C]'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-[#1B3A1B]/70">Convertidos</span>
-                <UserCheck className="w-4 h-4 text-[#2E7D32]" />
+                <span className="text-xs font-semibold text-[#1F3D33]/70">Convertidos</span>
+                <UserCheck className="w-4 h-4 text-[#2E5E4E]" />
               </div>
-              <div className="font-serif italic font-bold text-2xl sm:text-3xl text-[#2E7D32] mt-1">
+              <div className="font-heading font-bold text-2xl sm:text-3xl text-[#2E5E4E] mt-1">
                 {contagemConvertidos}
               </div>
-              <p className="text-[11px] text-[#4A7C59]">Matriculados no estúdio</p>
+              <p className="text-[11px] text-[#7FAF9C]">Matriculados no estúdio</p>
             </button>
 
             <button
@@ -423,17 +423,17 @@ export const PainelContatos: React.FC = () => {
               className={`p-4 rounded-2xl border text-left transition-all ${
                 filtroStatus === 'Arquivado'
                   ? 'bg-gray-100 border-gray-400 shadow-sm'
-                  : 'bg-white border-[#C8E6C9]/60 hover:border-[#81C784]'
+                  : 'bg-white border-[#7FAF9C]/30 hover:border-[#7FAF9C]'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-xs font-semibold text-[#1B3A1B]/70">Arquivados</span>
+                <span className="text-xs font-semibold text-[#1F3D33]/70">Arquivados</span>
                 <Archive className="w-4 h-4 text-gray-500" />
               </div>
-              <div className="font-serif italic font-bold text-2xl sm:text-3xl text-gray-700 mt-1">
+              <div className="font-heading font-bold text-2xl sm:text-3xl text-gray-700 mt-1">
                 {contagemArquivados}
               </div>
-              <p className="text-[11px] text-[#4A7C59]">Finalizados / Sem interesse</p>
+              <p className="text-[11px] text-[#7FAF9C]">Finalizados / Sem interesse</p>
             </button>
           </div>
         </div>
@@ -481,7 +481,7 @@ export const PainelContatos: React.FC = () => {
             <div className="w-14 h-14 rounded-full bg-[#E8F5E9] flex items-center justify-center text-[#2E7D32]">
               <Sparkles className="w-7 h-7" />
             </div>
-            <h3 className="font-serif italic font-bold text-xl text-[#1B3A1B]">
+            <h3 className="font-heading font-bold text-xl text-[#1F3D33]">
               Nenhum contato encontrado
             </h3>
             <p className="text-xs text-[#4A7C59] max-w-sm">
@@ -678,12 +678,12 @@ export const PainelContatos: React.FC = () => {
       >
         <DialogContent className="rounded-3xl max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif italic font-bold text-xl text-[#1B3A1B]">
+            <DialogTitle className="font-heading font-bold text-xl text-[#1F3D33]">
               Excluir Contato
             </DialogTitle>
-            <DialogDescription className="text-sm text-[#4A7C59] pt-2">
+            <DialogDescription className="text-sm text-[#7FAF9C] pt-2">
               Tem certeza que deseja excluir o contato de{' '}
-              <strong className="text-[#1B3A1B]">{contatoParaExcluir?.nome}</strong>? Esta ação não
+              <strong className="text-[#1F3D33]">{contatoParaExcluir?.nome}</strong>? Esta ação não
               poderá ser desfeita.
             </DialogDescription>
           </DialogHeader>
@@ -709,10 +709,10 @@ export const PainelContatos: React.FC = () => {
       <Dialog open={modalNovoAberto} onOpenChange={setModalNovoAberto}>
         <DialogContent className="rounded-3xl max-w-md">
           <DialogHeader>
-            <DialogTitle className="font-serif italic font-bold text-xl text-[#1B3A1B]">
+            <DialogTitle className="font-heading font-bold text-xl text-[#1F3D33]">
               Novo Contato
             </DialogTitle>
-            <DialogDescription className="text-sm text-[#4A7C59]">
+            <DialogDescription className="text-sm text-[#7FAF9C]">
               Cadastre manualmente uma pessoa que fez contato por telefone ou pessoalmente no
               estúdio.
             </DialogDescription>

@@ -1,22 +1,26 @@
 import React from 'react'
 import { HeroSection } from '@/components/HeroSection'
 import { ServicesSection } from '@/components/ServicesSection'
+import { PrinciplesSection } from '@/components/PrinciplesSection'
 import { SocialProofSection } from '@/components/SocialProofSection'
 import { ContactFormSection } from '@/components/ContactFormSection'
 
 const Index: React.FC = () => {
   return (
     <div className="flex flex-col w-full">
-      {/* 1. Página de apresentação (Hero com proposta de valor e Drica) */}
+      {/* 1. Página de apresentação (Hero com proposta de valor, Drica e Reformer) */}
       <HeroSection />
 
-      {/* 2. Serviços em destaque (8 cards completos) */}
+      {/* 2. Serviços em destaque (8 modalidades da base) */}
       <ServicesSection />
 
-      {/* 3. Prova social (depoimentos, contadores animados, frase Drica) */}
+      {/* 3. Os Seis Princípios do Método Pilates (Powerhouse, Respiração, Concentração, Controle, Precisão, Fluidez) */}
+      <PrinciplesSection />
+
+      {/* 4. Prova social (depoimentos, contadores animados, frase Drica) */}
       <SocialProofSection />
 
-      {/* 4. Formulário de contato (salvando na coleção contatos do PocketBase) */}
+      {/* 5. Formulário de contato (salvando na coleção contatos do PocketBase) */}
       <ContactFormSection />
     </div>
   )

@@ -1,8 +1,18 @@
 import React, { useState } from 'react'
-import { Send, CheckCircle2, MessageCircle, Mail, User, HelpCircle, Loader2 } from 'lucide-react'
+import {
+  Send,
+  CheckCircle2,
+  MessageCircle,
+  Mail,
+  User,
+  HelpCircle,
+  Loader2,
+  Sparkles,
+} from 'lucide-react'
 import { criarContato, type NecessidadeTipo } from '@/services/contatos'
 import { useToast } from '@/hooks/use-toast'
-import { getWhatsAppLink } from '@/components/StudioLogo'
+import { getWhatsAppLink, WHATSAPP_DISPLAY, EMAIL_DISPLAY } from '@/components/StudioLogo'
+import dricaFoto from '@/assets/dricaacenando-e2c88.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
   'Pilates',
@@ -69,7 +79,7 @@ export const ContactFormSection: React.FC = () => {
       toast({
         title: 'Recebi sua mensagem!',
         description: 'Em breve você terá a resposta da Drica. Obrigado pelo carinho!',
-        className: 'bg-[#2E7D32] text-white border-none shadow-lg',
+        className: 'bg-[#2E5E4E] text-white border-none shadow-lg',
       })
     } catch (error) {
       console.error('Erro ao enviar contato:', error)
@@ -87,79 +97,95 @@ export const ContactFormSection: React.FC = () => {
     <section id="contato" className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto max-w-5xl px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Lado Esquerdo: Texto explicativo e contato rápido */}
+          {/* Lado Esquerdo: Texto explicativo e acolhimento da Drica */}
           <div className="lg:col-span-5 flex flex-col gap-6 text-left">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#E8F5E9] text-[#2E7D32] text-xs font-semibold uppercase tracking-wider mb-3">
+              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EAF2EF] text-[#2E5E4E] text-xs font-heading font-semibold uppercase tracking-wider mb-3 border border-[#7FAF9C]/30">
+                <Sparkles className="w-3 h-3 text-[#2E5E4E]" />
                 Primeiro Passo
               </div>
-              <h2 className="font-serif italic font-bold text-3xl sm:text-4xl text-[#1B3A1B] leading-tight">
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
                 Diga um oi para a Drica.
               </h2>
-              <p className="text-base text-[#4A7C59] mt-3 leading-relaxed">
-                Preencha o formulário abaixo que retornamos com todo o carinho e as melhores opções
-                para o seu momento.
+              <p className="text-base text-[#1F3D33]/80 mt-3 leading-relaxed">
+                Preencha o formulário e nós retornamos com carinho, ouvindo sua história e
+                apresentando a melhor alternativa para seu momento.
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-[#F4F9F4] border border-[#C8E6C9] flex flex-col gap-3.5">
-              <p className="font-serif italic text-sm text-[#1B3A1B]">
-                "Você não precisa chegar sabendo tudo. Nossa conversa começa pelo que você está
-                sentindo hoje."
-              </p>
-              <div className="flex items-center gap-2 text-xs font-bold text-[#2E7D32]">
-                <span>— Drica</span>
+            {/* Balão informativo Dica da Drica */}
+            <div className="p-5 rounded-2xl bg-[#F4F8F6] border border-[#7FAF9C]/40 flex items-start gap-3.5 shadow-xs">
+              <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5">
+                <img
+                  src={dricaFoto}
+                  alt="Drica"
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="flex flex-col gap-1">
+                <span className="text-[11px] font-heading font-bold text-[#2E5E4E] uppercase tracking-wider">
+                  Dica da Drica
+                </span>
+                <p className="text-xs sm:text-sm text-[#1F3D33] leading-relaxed">
+                  "Você não precisa chegar sabendo o método. Nossa conversa começa pelo que você
+                  sente hoje e onde deseja chegar com saúde e liberdade."
+                </p>
               </div>
             </div>
 
-            <div className="space-y-3 pt-2">
+            {/* Links rápidos */}
+            <div className="space-y-3 pt-1">
               <a
                 href={getWhatsAppLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 hover:border-[#81C784] hover:bg-[#E8F5E9]/30 transition-all text-sm text-[#1B3A1B] group"
+                className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 hover:border-[#7FAF9C] hover:bg-[#EAF2EF]/50 transition-all text-sm text-[#1F3D33] group"
               >
-                <div className="w-9 h-9 rounded-full bg-[#E8F5E9] group-hover:bg-[#25D366] text-[#2E7D32] group-hover:text-white flex items-center justify-center transition-colors">
+                <div className="w-9 h-9 rounded-full bg-[#EAF2EF] group-hover:bg-[#2E5E4E] text-[#2E5E4E] group-hover:text-white flex items-center justify-center transition-colors">
                   <MessageCircle className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-[#4A7C59] block">
-                    Prefere conversar no WhatsApp?
+                  <span className="text-xs text-[#7FAF9C] font-semibold block">
+                    Conversar direto no WhatsApp
                   </span>
-                  <span className="font-semibold text-sm">(21) 99444-8482</span>
+                  <span className="font-heading font-bold text-sm text-[#1F3D33]">
+                    {WHATSAPP_DISPLAY}
+                  </span>
                 </div>
               </a>
 
-              <div className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 text-sm text-[#1B3A1B]">
-                <div className="w-9 h-9 rounded-full bg-[#E8F5E9] text-[#2E7D32] flex items-center justify-center">
+              <div className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 text-sm text-[#1F3D33]">
+                <div className="w-9 h-9 rounded-full bg-[#EAF2EF] text-[#2E5E4E] flex items-center justify-center">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs text-[#4A7C59] block">E-mail para dúvidas</span>
-                  <span className="font-semibold text-sm">basesixstudio@gmail.com</span>
+                  <span className="text-xs text-[#7FAF9C] font-semibold block">E-mail oficial</span>
+                  <span className="font-heading font-medium text-sm text-[#1F3D33]">
+                    {EMAIL_DISPLAY}
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Lado Direito: Formulário com visual orgânico */}
+          {/* Lado Direito: Formulário com visual acolhedor */}
           <div className="lg:col-span-7">
-            <div className="bg-[#F4F9F4] p-8 sm:p-10 rounded-[32px] border border-[#C8E6C9] shadow-organic">
+            <div className="bg-[#F4F8F6] p-8 sm:p-10 rounded-[32px] border border-[#7FAF9C]/40 shadow-organic">
               {sucesso ? (
                 <div className="py-8 text-center flex flex-col items-center gap-4 animate-fade-in">
-                  <div className="w-16 h-16 rounded-full bg-[#E8F5E9] border-2 border-[#81C784] flex items-center justify-center text-[#2E7D32] shadow-xs">
+                  <div className="w-16 h-16 rounded-full bg-[#EAF2EF] border-2 border-[#2E5E4E] flex items-center justify-center text-[#2E5E4E] shadow-xs">
                     <CheckCircle2 className="w-9 h-9" />
                   </div>
-                  <h3 className="font-serif italic font-bold text-2xl text-[#1B3A1B]">
+                  <h3 className="font-heading font-bold text-2xl text-[#1F3D33]">
                     Recebi sua mensagem!
                   </h3>
-                  <p className="text-sm text-[#4A7C59] max-w-md leading-relaxed">
-                    Muito obrigado pelo contato. Em breve você terá a resposta da Drica para
-                    agendarmos sua conversa ou aula experimental.
+                  <p className="text-sm text-[#1F3D33]/80 max-w-md leading-relaxed">
+                    Muito obrigado pelo contato. Em breve a Drica e nossa equipe entrarão em contato
+                    para agendar sua conversa ou aula experimental com todo carinho.
                   </p>
                   <button
                     onClick={() => setSucesso(false)}
-                    className="mt-4 text-xs font-bold text-[#2E7D32] hover:underline uppercase tracking-wider"
+                    className="mt-4 text-xs font-heading font-bold text-[#2E5E4E] hover:underline uppercase tracking-wider cursor-pointer"
                   >
                     Enviar outra mensagem
                   </button>
@@ -170,9 +196,9 @@ export const ContactFormSection: React.FC = () => {
                   <div>
                     <label
                       htmlFor="campo-nome"
-                      className="block text-xs font-bold text-[#1B3A1B] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
+                      className="block text-xs font-heading font-bold text-[#1F3D33] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
                     >
-                      <User className="w-3.5 h-3.5 text-[#2E7D32]" />
+                      <User className="w-3.5 h-3.5 text-[#2E5E4E]" />
                       Seu Nome *
                     </label>
                     <input
@@ -187,8 +213,8 @@ export const ContactFormSection: React.FC = () => {
                       className={`w-full px-4 py-3 rounded-2xl bg-white border ${
                         erros.nome
                           ? 'border-red-400 focus:ring-red-300'
-                          : 'border-[#C8E6C9] focus:border-[#2E7D32]'
-                      } text-[#1B3A1B] placeholder:text-[#4A7C59]/40 text-sm focus:outline-none focus:ring-2 focus:ring-[#81C784]/40 transition-all`}
+                          : 'border-[#7FAF9C]/40 focus:border-[#2E5E4E]'
+                      } text-[#1F3D33] placeholder:text-[#A0A0A0] text-sm focus:outline-none focus:ring-2 focus:ring-[#7FAF9C]/40 transition-all`}
                     />
                     {erros.nome && <p className="text-xs text-red-600 mt-1">{erros.nome}</p>}
                   </div>
@@ -197,9 +223,9 @@ export const ContactFormSection: React.FC = () => {
                   <div>
                     <label
                       htmlFor="campo-contato"
-                      className="block text-xs font-bold text-[#1B3A1B] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
+                      className="block text-xs font-heading font-bold text-[#1F3D33] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
                     >
-                      <MessageCircle className="w-3.5 h-3.5 text-[#2E7D32]" />
+                      <MessageCircle className="w-3.5 h-3.5 text-[#2E5E4E]" />
                       Contato (WhatsApp ou E-mail) *
                     </label>
                     <input
@@ -214,8 +240,8 @@ export const ContactFormSection: React.FC = () => {
                       className={`w-full px-4 py-3 rounded-2xl bg-white border ${
                         erros.contato
                           ? 'border-red-400 focus:ring-red-300'
-                          : 'border-[#C8E6C9] focus:border-[#2E7D32]'
-                      } text-[#1B3A1B] placeholder:text-[#4A7C59]/40 text-sm focus:outline-none focus:ring-2 focus:ring-[#81C784]/40 transition-all`}
+                          : 'border-[#7FAF9C]/40 focus:border-[#2E5E4E]'
+                      } text-[#1F3D33] placeholder:text-[#A0A0A0] text-sm focus:outline-none focus:ring-2 focus:ring-[#7FAF9C]/40 transition-all`}
                     />
                     {erros.contato && <p className="text-xs text-red-600 mt-1">{erros.contato}</p>}
                   </div>
@@ -224,10 +250,10 @@ export const ContactFormSection: React.FC = () => {
                   <div>
                     <label
                       htmlFor="campo-necessidade"
-                      className="block text-xs font-bold text-[#1B3A1B] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
+                      className="block text-xs font-heading font-bold text-[#1F3D33] uppercase tracking-wider mb-1.5 flex items-center gap-1.5"
                     >
-                      <HelpCircle className="w-3.5 h-3.5 text-[#2E7D32]" />
-                      O que você precisa? *
+                      <HelpCircle className="w-3.5 h-3.5 text-[#2E5E4E]" />
+                      O que você procura? *
                     </label>
                     <select
                       id="campo-necessidade"
@@ -236,7 +262,7 @@ export const ContactFormSection: React.FC = () => {
                         setNecessidade(e.target.value as NecessidadeTipo)
                         if (erros.necessidade) setErros({ ...erros, necessidade: undefined })
                       }}
-                      className="w-full px-4 py-3 rounded-2xl bg-white border border-[#C8E6C9] focus:border-[#2E7D32] text-[#1B3A1B] text-sm focus:outline-none focus:ring-2 focus:ring-[#81C784]/40 transition-all cursor-pointer"
+                      className="w-full px-4 py-3 rounded-2xl bg-white border border-[#7FAF9C]/40 focus:border-[#2E5E4E] text-[#1F3D33] text-sm focus:outline-none focus:ring-2 focus:ring-[#7FAF9C]/40 transition-all cursor-pointer"
                     >
                       {OPCOES_NECESSIDADE.map((opt) => (
                         <option key={opt} value={opt}>
@@ -253,7 +279,7 @@ export const ContactFormSection: React.FC = () => {
                   <button
                     type="submit"
                     disabled={carregando}
-                    className="w-full mt-4 flex items-center justify-center gap-2 bg-[#2E7D32] hover:bg-[#256629] text-white py-4 rounded-2xl font-semibold text-base shadow-organic hover:shadow-organic-lg transition-all duration-200 hover:scale-[1.01] active:scale-98 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
+                    className="w-full mt-4 flex items-center justify-center gap-2 bg-[#2E5E4E] hover:bg-[#1F3D33] text-white py-4 rounded-2xl font-heading font-semibold text-base shadow-organic hover:shadow-organic-lg transition-all duration-200 hover:scale-[1.01] active:scale-98 disabled:opacity-70 disabled:cursor-not-allowed cursor-pointer"
                   >
                     {carregando ? (
                       <>
@@ -268,9 +294,8 @@ export const ContactFormSection: React.FC = () => {
                     )}
                   </button>
 
-                  <p className="text-[11px] text-center text-[#4A7C59]/75 pt-1">
-                    Seus dados são usados exclusivamente para responder seu contato com carinho e
-                    respeito.
+                  <p className="text-[11px] text-center text-[#A0A0A0] pt-1">
+                    Seus dados são usados com privacidade para responder ao seu contato.
                   </p>
                 </form>
               )}
@@ -281,3 +306,4 @@ export const ContactFormSection: React.FC = () => {
     </section>
   )
 }
+export default ContactFormSection

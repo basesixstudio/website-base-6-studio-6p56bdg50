@@ -26,9 +26,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Nunito Sans"', 'system-ui', '-apple-system', 'sans-serif'],
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
-        display: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['"Open Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+        heading: ['"Montserrat"', 'system-ui', '-apple-system', 'sans-serif'],
+        montserrat: ['"Montserrat"', 'system-ui', '-apple-system', 'sans-serif'],
+        opensans: ['"Open Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         border: 'hsl(var(--border))',
@@ -36,16 +37,15 @@ export default {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
-        /* Base 6 Studio Brand Palette */
+        /* Base 6 Studio - Paleta Oficial do Manual de Identidade */
         brand: {
-          light: '#C8E6C9', // verde-claro
-          medium: '#81C784', // verde-médio
-          dark: '#2E7D32', // verde-escuro
-          olive: '#558B2F', // verde-oliva
-          darkest: '#1B3A1B', // texto primário
-          muted: '#4A7C59', // texto secundário
-          surface: '#F4F9F4', // fundo suave
-          accent: '#A5D6A7',
+          dark: '#2E5E4E', // Verde Escuro Institucional (Principal)
+          light: '#7FAF9C', // Verde Claro Secundário (Destaque)
+          darkest: '#1F3D33', // Verde Muito Escuro / Quase Preto
+          white: '#FFFFFF', // Branco
+          gray: '#A0A0A0', // Cinza Neutro
+          surface: '#F4F8F6', // Fundo sutil derivado
+          soft: '#EAF2EF', // Fundo claro para badges e cards
         },
         primary: {
           DEFAULT: 'hsl(var(--primary))',
@@ -94,9 +94,9 @@ export default {
         '4xl': '2rem',
       },
       boxShadow: {
-        subtle: '0 2px 8px -1px rgba(27, 58, 27, 0.06)',
-        organic: '0 8px 30px -4px rgba(46, 125, 50, 0.12)',
-        'organic-lg': '0 16px 40px -8px rgba(46, 125, 50, 0.18)',
+        subtle: '0 2px 8px -1px rgba(31, 61, 51, 0.06)',
+        organic: '0 8px 30px -4px rgba(46, 94, 78, 0.12)',
+        'organic-lg': '0 16px 40px -8px rgba(46, 94, 78, 0.18)',
       },
     },
   },

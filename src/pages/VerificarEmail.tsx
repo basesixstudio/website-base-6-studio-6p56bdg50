@@ -37,14 +37,14 @@ export const VerificarEmail: React.FC = () => {
   }, [token, navigate])
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#E8F5E9] via-[#F4F9F4] to-[#C8E6C9]/30 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#F4F8F6] via-white to-[#EAF2EF] flex flex-col items-center justify-center p-4">
       <div className="w-full max-w-md">
-        <div className="bg-white rounded-[32px] p-8 sm:p-10 shadow-organic border border-[#81C784]/40 text-center">
+        <div className="bg-white rounded-[32px] p-8 sm:p-10 shadow-organic border border-[#7FAF9C]/40 text-center">
           <Link to="/" className="inline-block hover:scale-105 transition-transform mb-4">
-            <StudioLogo />
+            <StudioLogo size="lg" />
           </Link>
 
-          <h1 className="font-serif italic font-bold text-2xl text-[#1B3A1B] mb-2">
+          <h1 className="font-heading font-bold text-2xl text-[#1F3D33] mb-2">
             Verificação de E-mail
           </h1>
 
@@ -63,7 +63,7 @@ export const VerificarEmail: React.FC = () => {
               <p className="text-sm text-[#1B3A1B]">Seu e-mail foi verificado com sucesso!</p>
               <Link
                 to="/painel/login"
-                className="inline-block bg-[#2E7D32] text-white px-6 py-2.5 rounded-full text-xs font-semibold hover:bg-[#256629]"
+                className="inline-block bg-[#2E5E4E] text-white px-6 py-2.5 rounded-full text-xs font-heading font-semibold hover:bg-[#1F3D33]"
               >
                 Acessar o Painel
               </Link>
@@ -78,7 +78,7 @@ export const VerificarEmail: React.FC = () => {
               <p className="text-sm text-red-700">{erro}</p>
               <Link
                 to="/painel/login"
-                className="inline-block text-xs font-bold text-[#2E7D32] hover:underline"
+                className="inline-block text-xs font-heading font-bold text-[#2E5E4E] hover:underline"
               >
                 Ir para o login
               </Link>
