@@ -1,13 +1,11 @@
 import React from 'react'
 import {
   Activity,
-  Dumbbell,
   Stethoscope,
   Zap,
   ClipboardCheck,
   CalendarCheck2,
   Layers,
-  ShoppingBag,
   ArrowUpRight,
 } from 'lucide-react'
 import { getWhatsAppLink } from '@/components/StudioLogo'
@@ -31,18 +29,10 @@ export const ServicesSection: React.FC = () => {
       tag: 'Principal',
     },
     {
-      id: 'condicionamento',
-      titulo: 'Condicionamento Físico',
-      descricao:
-        'Treinos integrados que desenvolvem força funcional, estabilidade articular e vitalidade para o seu cotidiano.',
-      icone: <Dumbbell className="w-6 h-6 text-[#2E5E4E]" />,
-      tag: 'Energia',
-    },
-    {
       id: 'fisioterapia',
-      titulo: 'Fisioterapia & Pilates Clínico',
+      titulo: 'Pilates Clínico',
       descricao:
-        'Reabilitação cinesiológica orientada por fisioterapeuta para tratamento de dores crônicas e prevenção de lesões.',
+        'Reabilitação e cuidado com dores e lesões pelo método, em atendimento individualizado e seguro.',
       icone: <Stethoscope className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Reabilitação',
     },
@@ -78,14 +68,6 @@ export const ServicesSection: React.FC = () => {
       icone: <Layers className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Liberdade',
     },
-    {
-      id: 'acessorios',
-      titulo: 'Acessórios & Meias Especiais',
-      descricao:
-        'Meias antiderrapantes e acessórios selecionados para você praticar com máximo conforto, aderência e segurança.',
-      icone: <ShoppingBag className="w-6 h-6 text-[#2E5E4E]" />,
-      tag: 'Conforto',
-    },
   ]
 
   return (
@@ -108,8 +90,8 @@ export const ServicesSection: React.FC = () => {
           </p>
         </div>
 
-        {/* Grid de 8 cards (1 col mobile, 2 tablet, 4 desktop) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Grid de 6 cards (1 col mobile, 2 tablet, 3 desktop) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {servicos.map((servico) => {
             const whatsLink = getWhatsAppLink(
               `Olá, Drica! Gostaria de saber mais detalhes sobre ${servico.titulo} no BASE 6 STUDIO.`,
