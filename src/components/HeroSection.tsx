@@ -135,10 +135,11 @@ export const HeroSection: React.FC = () => {
               {/* Card principal com a foto oficial da Drica */}
               <div className="relative z-10 w-full overflow-hidden rounded-[32px] border-2 border-white shadow-organic bg-white group">
                 <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-[#2E5E4E]/5">
+                  {/* Recorte preciso para excluir o rodapé da imagem (texto com endereço e logotipo embutidos na parte inferior do PNG) mantendo Drica e o Reformer em destaque */}
                   <img
                     src={dricaFoto}
                     alt="Drica, porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates"
-                    className="w-full h-full object-cover object-top select-none transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="w-full h-[112%] max-w-none object-cover object-[center_top] -mb-[12%] select-none transition-transform duration-500 group-hover:scale-[1.03] origin-top"
                     loading="eager"
                   />
                 </div>
