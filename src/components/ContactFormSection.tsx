@@ -16,8 +16,6 @@ import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
   'Pilates',
-  'Condicionamento',
-  'Fisioterapia',
   'Plataforma Vibratória',
   'Avaliação Física',
   'Aula Experimental',
