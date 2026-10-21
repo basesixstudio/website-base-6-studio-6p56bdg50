@@ -4,6 +4,7 @@ import { ServicesSection } from '@/components/ServicesSection'
 import { PrinciplesSection } from '@/components/PrinciplesSection'
 import { SocialProofSection } from '@/components/SocialProofSection'
 import { DricasVideoSection } from '@/components/DricasVideoSection'
+import { FaqSection } from '@/components/FaqSection'
 import { ContactFormSection } from '@/components/ContactFormSection'
 
 const Index: React.FC = () => {
@@ -12,7 +13,7 @@ const Index: React.FC = () => {
       {/* 1. Página de apresentação (Hero com proposta de valor, Drica e Reformer) */}
       <HeroSection />
 
-      {/* 2. Serviços em destaque */}
+      {/* 2. Serviços em destaque (Pilates contemporâneo, clínico, plataforma WBV, avaliações, aulas experimentais, planos) */}
       <ServicesSection />
 
       {/* 3. Os Seis Princípios do Método Pilates (Powerhouse, Respiração, Concentração, Controle, Precisão, Fluidez) */}
@@ -24,7 +25,10 @@ const Index: React.FC = () => {
       {/* 5. Seção de vídeo "Dicas da Drica" (YouTube embed fAXWaW8qzto) */}
       <DricasVideoSection />
 
-      {/* 6. Formulário de contato ("Diga um oi para a Drica" + dica escrita) */}
+      {/* 6. Perguntas Frequentes (FAQ otimizado para SEO e buscas por IA) */}
+      <FaqSection />
+
+      {/* 7. Formulário de contato ("Diga um oi para a Drica" + dica escrita) */}
       <ContactFormSection />
     </div>
   )

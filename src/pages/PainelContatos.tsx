@@ -37,7 +37,10 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 
+import { useNoIndex } from '@/hooks/use-no-index'
+
 export const PainelContatos: React.FC = () => {
+  useNoIndex()
   const navigate = useNavigate()
   const { toast } = useToast()
 

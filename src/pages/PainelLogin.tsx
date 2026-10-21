@@ -5,7 +5,10 @@ import pb from '@/lib/pocketbase/client'
 import { StudioLogo } from '@/components/StudioLogo'
 import { useToast } from '@/hooks/use-toast'
 
+import { useNoIndex } from '@/hooks/use-no-index'
+
 export const PainelLogin: React.FC = () => {
+  useNoIndex()
   const navigate = useNavigate()
   const { toast } = useToast()
 

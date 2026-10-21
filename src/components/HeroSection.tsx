@@ -46,9 +46,9 @@ export const HeroSection: React.FC = () => {
               </span>
             </div>
 
-            {/* Título Principal em Montserrat Bold/SemiBold */}
+            {/* Título Principal em Montserrat Bold/SemiBold (H1 único da página) */}
             <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-[#1F3D33] leading-[1.12] tracking-tight">
-              Transforme dor em saúde pelo{' '}
+              Pilates Contemporâneo e Reabilitação em Niterói:{' '}
               <span className="text-[#2E5E4E] relative inline-block">
                 movimento inteligente.
                 <span className="absolute left-0 bottom-1 w-full h-2 bg-[#7FAF9C]/30 -z-10 rounded-full" />
@@ -58,8 +58,8 @@ export const HeroSection: React.FC = () => {
             {/* Proposta de valor em Open Sans */}
             <p className="text-lg sm:text-xl text-[#1F3D33]/85 font-normal leading-relaxed max-w-xl">
               Sua dor não define você: ela é o ponto de partida da sua evolução. Pilates
-              contemporâneo, condicionamento físico, fisioterapia e plataforma vibratória com
-              cuidado humano no Fonseca, Niterói.
+              contemporâneo, Pilates clínico (reabilitação) e Plataforma Vibratória (WBV) com
+              acolhimento humano e método individualizado no Fonseca, Niterói/RJ.
             </p>
 
             {/* Fala da Drica (Porta-Voz Oficial) - Acolhedora, Didática e Encorajadora */}
@@ -138,7 +138,7 @@ export const HeroSection: React.FC = () => {
                   {/* Recorte preciso para excluir o rodapé da imagem (texto com endereço e logotipo embutidos na parte inferior do PNG) mantendo Drica e o Reformer em destaque */}
                   <img
                     src={dricaFoto}
-                    alt="Drica, porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates"
+                    alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates no estúdio em Fonseca, Niterói/RJ"
                     className="w-full h-[112%] max-w-none object-cover object-[center_top] -mb-[12%] select-none transition-transform duration-500 group-hover:scale-[1.03] origin-top"
                     loading="eager"
                   />

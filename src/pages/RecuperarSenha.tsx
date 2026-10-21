@@ -5,7 +5,10 @@ import pb from '@/lib/pocketbase/client'
 import { StudioLogo } from '@/components/StudioLogo'
 import { useToast } from '@/hooks/use-toast'
 
+import { useNoIndex } from '@/hooks/use-no-index'
+
 export const RecuperarSenha: React.FC = () => {
+  useNoIndex()
   const { toast } = useToast()
   const [email, setEmail] = useState('')
   const [carregando, setCarregando] = useState(false)

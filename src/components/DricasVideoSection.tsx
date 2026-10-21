@@ -59,8 +59,9 @@ export const DricasVideoSection: React.FC = () => {
                 <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E5E4E] bg-[#2E5E4E]/10 shadow-xs">
                   <img
                     src={dricaInsightFoto}
-                    alt="Drica - Porta-voz & Profissional de Educação Física"
+                    alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz oficial do BASE 6 STUDIO em Niterói/RJ"
                     className="w-full h-full object-cover object-[50%_15%]"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute -bottom-1 -right-1 bg-[#2E5E4E] text-white p-1 rounded-full shadow-xs">

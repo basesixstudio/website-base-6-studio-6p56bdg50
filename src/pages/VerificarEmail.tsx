@@ -3,8 +3,10 @@ import { useNavigate, useSearchParams, Link } from 'react-router-dom'
 import { CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 import pb from '@/lib/pocketbase/client'
 import { StudioLogo } from '@/components/StudioLogo'
+import { useNoIndex } from '@/hooks/use-no-index'
 
 export const VerificarEmail: React.FC = () => {
+  useNoIndex()
   const [searchParams] = useSearchParams()
   const token = searchParams.get('token') || ''
   const navigate = useNavigate()

@@ -103,11 +103,12 @@ export const ContactFormSection: React.FC = () => {
                 Primeiro Passo
               </div>
               <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
-                Diga um oi para a Drica.
+                Agende sua visita: Diga um oi para a Drica.
               </h2>
               <p className="text-base text-[#1F3D33]/80 mt-3 leading-relaxed">
-                Preencha o formulário e nós retornamos com carinho, ouvindo sua história e
-                apresentando a melhor alternativa para seu momento.
+                Preencha o formulário e nós retornamos com carinho. Conheça nosso estúdio no
+                Fonseca, Niterói/RJ, ouvindo sua história e apresentando a melhor alternativa para
+                seu momento.
               </p>
             </div>
 
@@ -116,8 +117,9 @@ export const ContactFormSection: React.FC = () => {
               <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5 bg-[#2E5E4E]/10">
                 <img
                   src={dricaInsightFoto}
-                  alt="Dica da Drica - Porta-voz oficial"
+                  alt="Drica, Profissional de Educação Física do BASE 6 STUDIO Fonseca Niterói"
                   className="w-full h-full object-cover object-[50%_15%]"
+                  loading="lazy"
                 />
               </div>
               <div className="flex flex-col gap-1">

@@ -4,8 +4,10 @@ import { Lock, ArrowRight, Loader2, CheckCircle2, AlertCircle } from 'lucide-rea
 import pb from '@/lib/pocketbase/client'
 import { StudioLogo } from '@/components/StudioLogo'
 import { useToast } from '@/hooks/use-toast'
+import { useNoIndex } from '@/hooks/use-no-index'
 
 export const RedefinirSenha: React.FC = () => {
+  useNoIndex()
   const [searchParams] = useSearchParams()
   const token = searchParams.get('token') || ''
   const navigate = useNavigate()

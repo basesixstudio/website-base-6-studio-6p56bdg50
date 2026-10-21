@@ -23,6 +23,7 @@ export const Navbar: React.FC = () => {
     { label: 'Princípios', href: '/#principios' },
     { label: 'Depoimentos', href: '/#depoimentos' },
     { label: 'Dicas da Drica', href: '/#dicas-da-drica' },
+    { label: 'FAQ', href: '/#faq' },
     { label: 'Contato', href: '/#contato' },
   ]
 

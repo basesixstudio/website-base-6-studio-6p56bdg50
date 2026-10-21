@@ -1,17 +1,239 @@
 <!-- HTML template for the frontend react app: https://developer.mozilla.org/en-US/docs/Web/HTML -->
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BASE 6 STUDIO — Uma base. Seis princípios. | Pilates & Fisioterapia em Niterói</title>
-    <meta name="description" content="BASE 6 STUDIO — Pilates contemporâneo, condicionamento físico, fisioterapia e plataforma vibratória no Fonseca, Niterói/RJ. Uma base. Seis princípios." />
+
+    <!-- SEO Primário -->
+    <title>BASE 6 STUDIO | Pilates, Pilates Clínico e Plataforma Vibratória em Niterói/RJ</title>
+    <meta
+      name="description"
+      content="Estúdio de Pilates contemporâneo, Pilates clínico (reabilitação) e Plataforma Vibratória (WBV) no Fonseca, Niterói/RJ. 20 anos de experiência com a Drica. Agende sua aula experimental!"
+    />
+    <meta
+      name="keywords"
+      content="pilates niterói, pilates fonseca, pilates clínico niterói, plataforma vibratória niterói, estúdio de pilates niterói, fisioterapia fonseca niterói, reabilitação física niterói, pilates melhor idade niterói, drica pilates, base 6 studio"
+    />
+    <meta name="author" content="BASE 6 STUDIO - Adriana Mello de Lima" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://base-6-studio-7d1d8.goskip.app/" />
+
+    <!-- Geo Meta Tags para SEO Local em Niterói/RJ -->
+    <meta name="geo.region" content="BR-RJ" />
+    <meta name="geo.placename" content="Niterói, Fonseca" />
+    <meta name="geo.position" content="-22.8833;-43.0886" />
+    <meta name="ICBM" content="-22.8833, -43.0886" />
+
+    <!-- Tema e Ícones Oficiais -->
     <meta name="theme-color" content="#2E5E4E" />
     <link rel="icon" type="image/png" href="/src/assets/logo-base-6-studio-verde-0c93f.png" />
     <link rel="apple-touch-icon" href="/src/assets/logo-base-6-studio-verde-0c93f.png" />
-    <meta property="og:title" content="BASE 6 STUDIO — Uma base. Seis princípios." />
-    <meta property="og:description" content="Estúdio de Pilates contemporâneo, condicionamento físico e fisioterapia com a Drica no Fonseca, Niterói/RJ." />
-    <meta property="og:image" content="/src/assets/logo-base-6-studio-verde-0c93f.png" />
+
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
+    <meta property="og:type" content="business.business" />
+    <meta property="og:url" content="https://base-6-studio-7d1d8.goskip.app/" />
+    <meta property="og:site_name" content="BASE 6 STUDIO" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:title"
+      content="BASE 6 STUDIO | Pilates, Pilates Clínico e Plataforma Vibratória em Niterói/RJ"
+    />
+    <meta
+      property="og:description"
+      content="Estúdio de Pilates contemporâneo, Pilates clínico e Plataforma Vibratória (WBV) no Fonseca, Niterói/RJ. Cuidado humanizado com a Drica. Agende sua aula experimental!"
+    />
+    <meta
+      property="og:image"
+      content="https://base-6-studio-7d1d8.goskip.app/src/assets/logo-base-6-studio-verde-0c93f.png"
+    />
+    <meta property="og:image:alt" content="Logotipo Oficial BASE 6 STUDIO - Niterói/RJ" />
+    <meta property="og:image:width" content="512" />
+    <meta property="og:image:height" content="512" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://base-6-studio-7d1d8.goskip.app/" />
+    <meta
+      name="twitter:title"
+      content="BASE 6 STUDIO | Pilates, Pilates Clínico e Plataforma Vibratória em Niterói/RJ"
+    />
+    <meta
+      name="twitter:description"
+      content="Pilates contemporâneo, Pilates clínico e Plataforma Vibratória no Fonseca, Niterói/RJ. Agende sua aula experimental com a Drica!"
+    />
+    <meta
+      name="twitter:image"
+      content="https://base-6-studio-7d1d8.goskip.app/src/assets/logo-base-6-studio-verde-0c93f.png"
+    />
+    <meta name="twitter:image:alt" content="BASE 6 STUDIO" />
+
+    <!-- Dados Estruturados JSON-LD (HealthAndBeautyBusiness, FAQPage, WebSite) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "HealthAndBeautyBusiness",
+            "@id": "https://base-6-studio-7d1d8.goskip.app/#business",
+            "name": "BASE 6 STUDIO",
+            "legalName": "A Mello de Lima Centro de Condicionamento Físico LTDA ME",
+            "slogan": "Uma base. Seis princípios.",
+            "description": "Estúdio de Pilates contemporâneo, Pilates clínico (reabilitação postural e alívio de dores), Plataforma Vibratória (WBV), avaliações físicas e planos personalizados no bairro Fonseca em Niterói/RJ. Sob a liderança da Prof.ª Adriana Mello de Lima (Drica), com 20 anos de Pilates e 23 anos como Profissional de Educação Física com foco na melhor idade.",
+            "url": "https://base-6-studio-7d1d8.goskip.app/",
+            "telephone": "+55-21-99444-8482",
+            "email": "basesixstudio@gmail.com",
+            "image": "https://base-6-studio-7d1d8.goskip.app/src/assets/logo-base-6-studio-verde-0c93f.png",
+            "logo": "https://base-6-studio-7d1d8.goskip.app/src/assets/logo-base-6-studio-verde-0c93f.png",
+            "priceRange": "$$",
+            "taxID": "69.476.157/0001-94",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Rua Desembargador Lima Castro, nº 126, Lojas 101 e 102",
+              "addressLocality": "Niterói",
+              "addressRegion": "RJ",
+              "postalCode": "24120-350",
+              "addressCountry": "BR",
+              "neighborhood": "Fonseca"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": -22.8833,
+              "longitude": -43.0886
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "07:00",
+                "closes": "20:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Saturday"],
+                "opens": "08:00",
+                "closes": "12:00"
+              }
+            ],
+            "sameAs": [
+              "https://youtu.be/fAXWaW8qzto",
+              "https://wa.me/5521994448482"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Serviços do BASE 6 STUDIO",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pilates Contemporâneo",
+                    "description": "Método contemporâneo com aparelhos completos (Reformer, Cadillac, Cadeira, Barril) para fortalecimento do core, flexibilidade e consciência corporal."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pilates Clínico",
+                    "description": "Atendimento individualizado focado em reabilitação de dores na coluna, hérnias, pós-cirúrgico, artrose e lesões musculoesqueléticas."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Plataforma Vibratória (WBV)",
+                    "description": "Tecnologia de vibração de corpo inteiro aplicada como recurso transversal para ganho de densidade óssea, drenagem e ativação neuromuscular."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Avaliações Físicas",
+                    "description": "Diagnóstico biomecânico e postural prévio para desenhar um plano de treino perfeitamente adaptado às necessidades do aluno."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Aula Experimental de Pilates",
+                    "description": "Vivência acolhedora e prática no estúdio com a Drica para conhecer o método sem compromisso."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://base-6-studio-7d1d8.goskip.app/#website",
+            "url": "https://base-6-studio-7d1d8.goskip.app/",
+            "name": "BASE 6 STUDIO",
+            "description": "Estúdio de Pilates contemporâneo, Pilates clínico e Plataforma Vibratória no Fonseca, Niterói/RJ.",
+            "inLanguage": "pt-BR",
+            "publisher": {
+              "@id": "https://base-6-studio-7d1d8.goskip.app/#business"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://base-6-studio-7d1d8.goskip.app/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "O que é o Pilates contemporâneo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O Pilates contemporâneo une os princípios clássicos criados por Joseph Pilates (Powerhouse, Respiração, Concentração, Controle, Precisão e Fluidez) às mais recentes descobertas da biomecânica e da fisioterapia motora moderna. Os exercícios são adaptados às necessidades anatômicas reais de cada pessoa, com segurança e sem sobrecargas desnecessárias."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Nunca fiz Pilates — por onde começo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Você começa agendando uma aula experimental acolhedora conosco pelo WhatsApp (21) 99444-8482. Não é preciso ter flexibilidade prévia, força ou experiência. No BASE 6 STUDIO, nossa porta-voz Drica e a equipe realizam uma conversa inicial cuidadosa para entender seu histórico e conduzir cada movimento no seu ritmo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O Pilates clínico serve para quem está com dor?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sim! O Pilates clínico é especialmente indicado para quem convive com dores crônicas na coluna, hérnia de disco, lombalgia, cervicalgia, artrose, bursite ou em recuperação pós-cirúrgica. A Educação Física e a Fisioterapia atuam em sinergia para fortalecer os músculos profundos de sustentação e aliviar as dores com segurança."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "O que é a Plataforma Vibratória (WBV)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WBV (Whole Body Vibration) é a tecnologia de vibração de corpo inteiro. No BASE 6 STUDIO, ela é utilizada como recurso transversal que potencializa o ganho de força muscular, estimula a densidade óssea, melhora a circulação sanguínea e a drenagem linfática, além de acelerar o alívio de tensões miofasciais."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como funciona a aula experimental?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A aula experimental é um encontro individualizado no nosso estúdio no Fonseca, Niterói. Você vivencia os aparelhos de Pilates, conversa sobre seus objetivos e limitações e sente na prática a sensação de acolhimento e bem-estar, sem compromisso de matrícula imediata."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Onde fica o estúdio BASE 6 STUDIO em Niterói?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Estamos localizados na Rua Desembargador Lima Castro, nº 126, Lojas 101 e 102, bairro Fonseca, Niterói/RJ, CEP 24.120-350. Um espaço amplo, acessível, climatizado e acolhedor para você construir sua melhor base de saúde."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>

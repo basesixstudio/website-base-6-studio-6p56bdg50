@@ -80,6 +80,11 @@ export const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
+                <a href="/#faq" className="hover:text-[#7FAF9C] transition-colors">
+                  Perguntas Frequentes (FAQ)
+                </a>
+              </li>
+              <li>
                 <a href="/#contato" className="hover:text-[#7FAF9C] transition-colors">
                   Fale com a Drica
                 </a>

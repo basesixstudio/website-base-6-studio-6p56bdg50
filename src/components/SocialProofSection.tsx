@@ -81,10 +81,11 @@ export const SocialProofSection: React.FC = () => {
             Depoimentos & Conquistas
           </div>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
-            Quem já transformou sua rotina nesta base
+            Quem já transformou sua rotina nesta base em Niterói
           </h2>
           <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3">
-            Histórias reais de pessoas que transformaram dores em saúde, força e autonomia.
+            Histórias reais de alunos de Niterói e Fonseca que transformaram dores em saúde, força e
+            autonomia.
           </p>
         </div>
 

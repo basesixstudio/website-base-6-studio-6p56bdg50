@@ -22,17 +22,17 @@ export const ServicesSection: React.FC = () => {
   const servicos: ServicoItem[] = [
     {
       id: 'pilates',
-      titulo: 'Pilates Contemporâneo',
+      titulo: 'Pilates Contemporâneo em Aparelhos',
       descricao:
-        'Método moderno que fortalece o corpo, aprimora a postura e alinha consciência motora com movimentos fluidos.',
+        'Método moderno em aparelhos completos (Reformer, Cadillac, Cadeira e Barril) que fortalece o core, melhora a postura e devolve mobilidade funcional no Fonseca, Niterói.',
       icone: <Activity className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Principal',
     },
     {
       id: 'fisioterapia',
-      titulo: 'Pilates Clínico',
+      titulo: 'Pilates Clínico & Reabilitação',
       descricao:
-        'Reabilitação e cuidado com dores e lesões pelo método, em atendimento individualizado e seguro.',
+        'Cuidado focado no alívio de dores na coluna, hérnias, artrose e lesões musculoesqueléticas, com atendimento individualizado e supervisão rigorosa.',
       icone: <Stethoscope className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Reabilitação',
     },
@@ -40,31 +40,31 @@ export const ServicesSection: React.FC = () => {
       id: 'plataforma',
       titulo: 'Plataforma Vibratória (WBV)',
       descricao:
-        'Recurso transversal em vibração de corpo inteiro que potencializa resultados de força, drenagem e alívio de tensões.',
+        'Recurso transversal de vibração de corpo inteiro que potencializa o ganho de força, ativa a densidade óssea, drenagem linfática e relaxamento miofascial.',
       icone: <Zap className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Tecnologia',
     },
     {
       id: 'avaliacoes',
-      titulo: 'Avaliações Físicas',
+      titulo: 'Avaliações Físicas & Biomecânicas',
       descricao:
-        'Diagnóstico postural e biomecânico completo para estruturar um plano de cuidado individualizado para você.',
+        'Diagnóstico postural completo e minucioso para estruturar seu plano de evolução individual com segurança e foco na melhor idade.',
       icone: <ClipboardCheck className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Diagnóstico',
     },
     {
       id: 'experimentais',
-      titulo: 'Aulas Experimentais',
+      titulo: 'Aulas Experimentais Acolhedoras',
       descricao:
-        'Vivencie o método no estúdio sem compromisso: acolhimento desde o primeiro minuto com nossa equipe.',
+        'Vivencie o método no estúdio em Niterói sem compromisso: acolhimento humano desde o primeiro minuto com a Drica e nossa equipe.',
       icone: <CalendarCheck2 className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Primeiro Passo',
     },
     {
       id: 'planos',
-      titulo: 'Planos Flexíveis',
+      titulo: 'Planos Flexíveis e Acessórios',
       descricao:
-        'Modalidades mensais, trimestrais, semestrais ou anuais planejadas para acompanhar sua rotina com tranquilidade.',
+        'Planos mensal, trimestral, semestral e anual pensados para a sua rotina, além de meias antiderrapantes e acessórios para sua prática segura.',
       icone: <Layers className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Liberdade',
     },
@@ -79,7 +79,7 @@ export const ServicesSection: React.FC = () => {
             Nossas Modalidades
           </div>
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
-            Cuidado integral, do alívio da dor à sua melhor versão.
+            Serviços em Destaque: Cuidado integral no Fonseca, Niterói
           </h2>
           <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3">
             "Aqui unimos a ciência do movimento ao calor humano. Do treino ao acompanhamento
