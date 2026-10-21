@@ -11,7 +11,13 @@ import {
 } from 'lucide-react'
 import { criarContato, type NecessidadeTipo } from '@/services/contatos'
 import { useToast } from '@/hooks/use-toast'
-import { getWhatsAppLink, WHATSAPP_DISPLAY, EMAIL_DISPLAY } from '@/components/StudioLogo'
+import {
+  getWhatsAppLink,
+  WHATSAPP_DISPLAY,
+  EMAIL_DISPLAY,
+  INSTAGRAM_URL,
+  INSTAGRAM_HANDLE,
+} from '@/components/StudioLogo'
 import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
@@ -165,6 +171,39 @@ export const ContactFormSection: React.FC = () => {
                   </span>
                 </div>
               </div>
+
+              <a
+                href={INSTAGRAM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram do BASE 6 STUDIO"
+                className="flex items-center gap-3 p-3.5 rounded-xl border border-gray-100 hover:border-[#7FAF9C] hover:bg-[#EAF2EF]/50 transition-all text-sm text-[#1F3D33] group"
+              >
+                <div className="w-9 h-9 rounded-full bg-[#EAF2EF] group-hover:bg-[#2E5E4E] text-[#2E5E4E] group-hover:text-white flex items-center justify-center transition-colors">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-5 h-5"
+                    aria-hidden="true"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </div>
+                <div>
+                  <span className="text-xs text-[#7FAF9C] font-semibold block">
+                    Siga a Drica e o estúdio no Instagram
+                  </span>
+                  <span className="font-heading font-bold text-sm text-[#1F3D33] group-hover:text-[#2E5E4E] transition-colors">
+                    {INSTAGRAM_HANDLE}
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
 

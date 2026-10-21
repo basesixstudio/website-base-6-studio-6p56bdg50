@@ -1,7 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MapPin, Phone, Mail, Heart, ArrowUp, ShieldCheck } from 'lucide-react'
+import { MapPin, Phone, Mail, Heart, ArrowUp, ShieldCheck, Youtube } from 'lucide-react'
 import {
+  INSTAGRAM_URL,
+  INSTAGRAM_HANDLE,
+  YOUTUBE_VIDEO_URL,
   WHATSAPP_DISPLAY,
   EMAIL_DISPLAY,
   ADDRESS_DISPLAY,
@@ -45,6 +48,57 @@ export const Footer: React.FC = () => {
                 <ShieldCheck className="w-3.5 h-3.5 text-[#7FAF9C]" />
                 Prof.ª Adriana Mello de Lima • CREF 013832-G/RJ
               </span>
+            </div>
+
+            {/* Redes Sociais Oficiais */}
+            <div className="pt-2 flex flex-col gap-2">
+              <span className="text-[11px] font-heading uppercase tracking-wider text-[#7FAF9C] font-semibold">
+                Redes Oficiais
+              </span>
+              <div className="flex items-center gap-2.5">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram do BASE 6 STUDIO"
+                  className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </a>
+
+                <a
+                  href={YOUTUBE_VIDEO_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="YouTube do BASE 6 STUDIO"
+                  className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
+                >
+                  <Youtube className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={getWhatsAppLink()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="WhatsApp do BASE 6 STUDIO"
+                  className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
+                >
+                  <Phone className="w-4 h-4" />
+                </a>
+              </div>
             </div>
           </div>
 
@@ -131,6 +185,40 @@ export const Footer: React.FC = () => {
                 >
                   {EMAIL_DISPLAY}
                 </a>
+              </div>
+
+              {/* Âncora textual visível para SEO / IA */}
+              <div className="flex items-center gap-3 pt-1">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-4 h-4 text-[#7FAF9C]"
+                    aria-hidden="true"
+                  >
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </div>
+                <div className="text-xs sm:text-sm leading-snug">
+                  <span className="text-white/80 font-light">Instagram:&nbsp;</span>
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#7FAF9C] underline-offset-2 hover:underline transition-colors font-medium text-[#7FAF9C]"
+                  >
+                    {INSTAGRAM_HANDLE}
+                  </a>
+                  <span className="text-white/60 font-light hidden sm:inline">
+                    &nbsp;(Siga nosso dia a dia)
+                  </span>
+                </div>
               </div>
             </div>
 

@@ -1,6 +1,9 @@
 import React from 'react'
 import logoOficial from '@/assets/logo-base-6-studio-verde-0c93f.png'
 
+export const INSTAGRAM_URL = 'https://www.instagram.com/base6studio/'
+export const INSTAGRAM_HANDLE = '@base6studio'
+export const YOUTUBE_VIDEO_URL = 'https://youtu.be/fAXWaW8qzto'
 export const WHATSAPP_URL = 'https://wa.me/5521994448482'
 export const WHATSAPP_DISPLAY = '(21) 99444-8482'
 export const EMAIL_DISPLAY = 'basesixstudio@gmail.com'
