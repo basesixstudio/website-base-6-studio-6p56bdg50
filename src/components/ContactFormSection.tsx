@@ -21,7 +21,8 @@ import {
 import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
-  'Pilates',
+  'Pilates Contemporâneo',
+  'Pilates Clínico',
   'Plataforma Vibratória',
   'Avaliação Física',
   'Aula Experimental',

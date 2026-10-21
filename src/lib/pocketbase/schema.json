@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:03:27.284Z",
+  "generatedAt": "2026-10-21T23:15:17.122Z",
   "collections": [
     {
       "name": "users",
@@ -74,6 +74,8 @@
           "system": false,
           "selectValues": [
             "Pilates",
+            "Pilates Contemporâneo",
+            "Pilates Clínico",
             "Condicionamento",
             "Fisioterapia",
             "Plataforma Vibratória",

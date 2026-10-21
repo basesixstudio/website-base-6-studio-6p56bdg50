@@ -759,6 +759,8 @@ export const PainelContatos: React.FC = () => {
                 onChange={(e) => setNovaNecessidade(e.target.value as NecessidadeTipo)}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-[#C8E6C9] focus:border-[#2E7D32] text-sm focus:outline-none"
               >
+                <option value="Pilates Contemporâneo">Pilates Contemporâneo</option>
+                <option value="Pilates Clínico">Pilates Clínico</option>
                 <option value="Pilates">Pilates</option>
                 <option value="Condicionamento">Condicionamento</option>
                 <option value="Fisioterapia">Fisioterapia</option>

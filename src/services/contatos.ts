@@ -3,6 +3,8 @@ import pb from '@/lib/pocketbase/client'
 
 export type NecessidadeTipo =
   | 'Pilates'
+  | 'Pilates Contemporâneo'
+  | 'Pilates Clínico'
   | 'Condicionamento'
   | 'Fisioterapia'
   | 'Plataforma Vibratória'
