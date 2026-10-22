@@ -6,4 +6,4 @@ Disallow: /recuperar-senha
 Disallow: /redefinir-senha
 Disallow: /verificar-email
 
-Sitemap: https://base-6-studio-7d1d8.goskip.app/sitemap.xml
+Sitemap: https://www.base6studio.com.br/sitemap.xml
