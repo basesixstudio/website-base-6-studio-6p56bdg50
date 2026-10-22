@@ -7,6 +7,7 @@ import Layout from '@/components/Layout'
 
 // Páginas
 import Index from '@/pages/Index'
+import ProtectedRoute from '@/components/ProtectedRoute'
 import PainelContatos from '@/pages/PainelContatos'
 import PainelLogin from '@/pages/PainelLogin'
 import RecuperarSenha from '@/pages/RecuperarSenha'
@@ -26,7 +27,14 @@ const App = () => (
         </Route>
 
         {/* Rotas Administrativas e de Autenticação */}
-        <Route path="/painel" element={<PainelContatos />} />
+        <Route
+          path="/painel"
+          element={
+            <ProtectedRoute>
+              <PainelContatos />
+            </ProtectedRoute>
+          }
+        />
         <Route path="/painel/login" element={<PainelLogin />} />
         <Route path="/recuperar-senha" element={<RecuperarSenha />} />
         <Route path="/redefinir-senha" element={<RedefinirSenha />} />

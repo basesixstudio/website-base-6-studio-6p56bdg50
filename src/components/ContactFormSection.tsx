@@ -42,16 +42,23 @@ export const ContactFormSection: React.FC = () => {
 
   const validar = () => {
     const novosErros: typeof erros = {}
-    if (!nome.trim()) {
+    const nomeTrim = nome.trim()
+    const contatoTrim = contato.trim()
+
+    if (!nomeTrim) {
       novosErros.nome = 'Por favor, informe seu nome.'
-    } else if (nome.trim().length < 2) {
+    } else if (nomeTrim.length < 2) {
       novosErros.nome = 'O nome precisa ter pelo menos 2 caracteres.'
+    } else if (nomeTrim.length > 120) {
+      novosErros.nome = 'O nome deve ter no máximo 120 caracteres.'
     }
 
-    if (!contato.trim()) {
+    if (!contatoTrim) {
       novosErros.contato = 'Por favor, informe seu WhatsApp ou e-mail para resposta.'
-    } else if (contato.trim().length < 5) {
+    } else if (contatoTrim.length < 5) {
       novosErros.contato = 'Informe um contato válido (ex: (21) 99999-9999 ou seu@email.com).'
+    } else if (contatoTrim.length > 120) {
+      novosErros.contato = 'O contato deve ter no máximo 120 caracteres.'
     }
 
     if (!necessidade) {
@@ -244,10 +251,12 @@ export const ContactFormSection: React.FC = () => {
                     <input
                       id="campo-nome"
                       type="text"
+                      maxLength={120}
+                      autoComplete="name"
                       placeholder="Como podemos te chamar?"
                       value={nome}
                       onChange={(e) => {
-                        setNome(e.target.value)
+                        setNome(e.target.value.slice(0, 120))
                         if (erros.nome) setErros({ ...erros, nome: undefined })
                       }}
                       className={`w-full px-4 py-3 rounded-2xl bg-white border ${
@@ -271,10 +280,12 @@ export const ContactFormSection: React.FC = () => {
                     <input
                       id="campo-contato"
                       type="text"
+                      maxLength={120}
+                      autoComplete="tel"
                       placeholder="Ex: (21) 99444-8482 ou seu@email.com"
                       value={contato}
                       onChange={(e) => {
-                        setContato(e.target.value)
+                        setContato(e.target.value.slice(0, 120))
                         if (erros.contato) setErros({ ...erros, contato: undefined })
                       }}
                       className={`w-full px-4 py-3 rounded-2xl bg-white border ${

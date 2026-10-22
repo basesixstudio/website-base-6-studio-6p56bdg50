@@ -28,10 +28,29 @@ export interface NovoContatoData {
   status?: StatusContato
 }
 
+// Sanitização básica contra scripts e caracteres invisíveis indesejados em strings
+export function sanitizarTexto(input: string, maxLen = 500): string {
+  if (!input) return ''
+  return input
+    .replace(/[\r\n\t]+/g, ' ')
+    .trim()
+    .slice(0, maxLen)
+}
+
 export async function criarContato(data: NovoContatoData): Promise<ContatoRecord> {
+  const nomeLimpo = sanitizarTexto(data.nome, 120)
+  const contatoLimpo = sanitizarTexto(data.contato, 120)
+
+  if (!nomeLimpo || nomeLimpo.length < 2) {
+    throw new Error('Nome inválido.')
+  }
+  if (!contatoLimpo || contatoLimpo.length < 5) {
+    throw new Error('Contato inválido.')
+  }
+
   const payload = {
-    nome: data.nome.trim(),
-    contato: data.contato.trim(),
+    nome: nomeLimpo,
+    contato: contatoLimpo,
     necessidade: data.necessidade,
     status: data.status || 'Novo',
   }
@@ -49,8 +68,8 @@ export async function listarContatos(
   }
 
   if (buscaNome && buscaNome.trim() !== '') {
-    // Sanitiza aspas simples
-    const cleanSearch = buscaNome.replace(/'/g, "\\'")
+    // Sanitiza aspas simples e caracteres de escape da query PocketBase
+    const cleanSearch = buscaNome.replace(/\\/g, '\\\\').replace(/'/g, "\\'")
     filtros.push(`nome ~ '${cleanSearch}'`)
   }
 

@@ -729,25 +729,27 @@ export const PainelContatos: React.FC = () => {
               <input
                 type="text"
                 required
+                maxLength={120}
                 placeholder="Nome do cliente"
                 value={novoNome}
-                onChange={(e) => setNovoNome(e.target.value)}
+                onChange={(e) => setNovoNome(e.target.value.slice(0, 120))}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-[#C8E6C9] focus:border-[#2E7D32] text-sm focus:outline-none"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-[#1B3A1B] uppercase tracking-wider mb-1">
+              <label className="block text-xs font-bold text-[#1B3A1B] uppercase tracking-wider mb-1.5">
                 Contato (WhatsApp / E-mail)
               </label>
               <input
                 type="text"
                 required
+                maxLength={120}
                 placeholder="(21) 99999-9999"
                 value={novoContato}
-                onChange={(e) => setNovoContato(e.target.value)}
+                onChange={(e) => setNovoContato(e.target.value.slice(0, 120))}
                 className="w-full px-3.5 py-2.5 rounded-xl border border-[#C8E6C9] focus:border-[#2E7D32] text-sm focus:outline-none"
-              />
+              />{' '}
             </div>
 
             <div>
