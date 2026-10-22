@@ -24,6 +24,7 @@ export const Navbar: React.FC = () => {
     { label: 'Depoimentos', href: '/#depoimentos' },
     { label: 'Dicas da Drica', href: '/#dicas-da-drica' },
     { label: 'FAQ', href: '/#faq' },
+    { label: 'Planos', href: '/#planos' },
     { label: 'Contato', href: '/#contato' },
   ]
 

@@ -5,6 +5,7 @@ import { PrinciplesSection } from '@/components/PrinciplesSection'
 import { SocialProofSection } from '@/components/SocialProofSection'
 import { DricasVideoSection } from '@/components/DricasVideoSection'
 import { FaqSection } from '@/components/FaqSection'
+import { PlansSection } from '@/components/PlansSection'
 import { ContactFormSection } from '@/components/ContactFormSection'
 
 const Index: React.FC = () => {
@@ -28,7 +29,10 @@ const Index: React.FC = () => {
       {/* 6. Perguntas Frequentes (FAQ otimizado para SEO e buscas por IA) */}
       <FaqSection />
 
-      {/* 7. Formulário de contato ("Diga um oi para a Drica" + dica escrita) */}
+      {/* 7. Planos (Pilates, Plataforma e Pilates + Plataforma em 1x, 2x e 3x/sem.) */}
+      <PlansSection />
+
+      {/* 8. Formulário de contato ("Diga um oi para a Drica" + dica escrita) */}
       <ContactFormSection />
     </div>
   )
