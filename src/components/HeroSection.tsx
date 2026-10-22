@@ -121,7 +121,11 @@ export const HeroSection: React.FC = () => {
               </span>
               <span className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-4 h-4 text-[#2E5E4E]" />
-                Ambiente acolhedor no Fonseca
+                Acolhimento além da técnica
+              </span>
+              <span className="flex items-center gap-1.5">
+                <CheckCircle2 className="w-4 h-4 text-[#2E5E4E]" />
+                Movimento que transforma: Conecte-se com seu corpo
               </span>
             </div>
           </div>
