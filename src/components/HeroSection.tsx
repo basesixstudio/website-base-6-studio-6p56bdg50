@@ -48,7 +48,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Título Principal em Montserrat Bold/SemiBold (H1 único da página) */}
             <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-[#1F3D33] leading-[1.12] tracking-tight">
-              Pilates Contemporâneo e Reabilitação em Niterói:{' '}
+              Pilates Contemporâneo e Pilates Clínico em Niterói:{' '}
               <span className="text-[#2E5E4E] relative inline-block">
                 movimento inteligente.
                 <span className="absolute left-0 bottom-1 w-full h-2 bg-[#7FAF9C]/30 -z-10 rounded-full" />
