@@ -1,6 +1,7 @@
 import React from 'react'
 import logoOficial from '@/assets/logo-base-6-studio-verde-0c93f.png'
 
+export const GOOGLE_REVIEW_URL = 'https://g.page/r/CfZGmm7KDJXfEBM/review'
 export const INSTAGRAM_URL = 'https://www.instagram.com/base6studio/'
 export const INSTAGRAM_HANDLE = '@base6studio'
 export const YOUTUBE_VIDEO_URL = 'https://youtu.be/fAXWaW8qzto'

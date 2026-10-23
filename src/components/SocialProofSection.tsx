@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Star, Quote, Sparkles } from 'lucide-react'
+import { Star, Quote, Sparkles, ExternalLink } from 'lucide-react'
+import { GOOGLE_REVIEW_URL } from './StudioLogo'
 
 interface Depoimento {
   id: string
@@ -83,10 +84,31 @@ export const SocialProofSection: React.FC = () => {
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
             Quem já transformou sua rotina nesta base em Niterói
           </h2>
-          <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3">
+          <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3 mb-4">
             Histórias reais de alunos de Niterói e Fonseca que transformaram dores em saúde, força e
             autonomia.
           </p>
+
+          {/* Selo discreto com link para avaliações no Google */}
+          <div className="flex items-center justify-center">
+            <a
+              href={GOOGLE_REVIEW_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white text-xs text-[#1F3D33] border border-[#7FAF9C]/35 hover:border-[#2E5E4E] hover:text-[#2E5E4E] shadow-2xs transition-all duration-200"
+              title="Ver e deixar avaliações no perfil do Google"
+            >
+              <div className="flex items-center gap-0.5">
+                {[...Array(5)].map((_, i) => (
+                  <Star key={i} className="w-3 h-3 fill-[#F9A825] text-[#F9A825]" />
+                ))}
+              </div>
+              <span className="font-medium text-[11px] sm:text-xs">
+                Depoimentos reais de alunas no Google
+              </span>
+              <ExternalLink className="w-3 h-3 text-[#7FAF9C] ml-0.5" />
+            </a>
+          </div>
         </div>
 
         {/* Números em Destaque (Contadores Animados) */}

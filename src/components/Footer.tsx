@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { MapPin, Phone, Mail, Heart, ArrowUp, ShieldCheck, Youtube } from 'lucide-react'
+import { MapPin, Phone, Mail, Heart, ArrowUp, ShieldCheck, Youtube, Star } from 'lucide-react'
 import {
+  GOOGLE_REVIEW_URL,
   INSTAGRAM_URL,
   INSTAGRAM_HANDLE,
   YOUTUBE_VIDEO_URL,
@@ -97,6 +98,30 @@ export const Footer: React.FC = () => {
                   className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
                 >
                   <Phone className="w-4 h-4" />
+                </a>
+
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Avaliar o BASE 6 STUDIO no Google"
+                  title="Avaliar no Google"
+                  className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
+                >
+                  <Star className="w-4 h-4 fill-current" />
+                </a>
+              </div>
+
+              {/* Link de texto discreto para avaliar no Google */}
+              <div className="pt-1">
+                <a
+                  href={GOOGLE_REVIEW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-xs text-white/75 hover:text-[#7FAF9C] transition-colors underline-offset-4 hover:underline"
+                >
+                  <Star className="w-3.5 h-3.5 text-[#F9A825] fill-[#F9A825] shrink-0" />
+                  <span>Avalie-nos no Google</span>
                 </a>
               </div>
             </div>
@@ -223,6 +248,24 @@ export const Footer: React.FC = () => {
                   <span className="text-white/60 font-light hidden sm:inline">
                     &nbsp;(Siga nosso dia a dia)
                   </span>
+                </div>
+              </div>
+
+              {/* Google Reviews */}
+              <div className="flex items-center gap-3 pt-0.5">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0">
+                  <Star className="w-4 h-4 text-[#F9A825] fill-[#F9A825]" />
+                </div>
+                <div className="text-xs sm:text-sm leading-snug">
+                  <span className="text-white/80 font-light">Google:&nbsp;</span>
+                  <a
+                    href={GOOGLE_REVIEW_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#7FAF9C] underline-offset-2 hover:underline transition-colors font-medium text-[#7FAF9C]"
+                  >
+                    ★ Avalie-nos no Google
+                  </a>
                 </div>
               </div>
             </div>
