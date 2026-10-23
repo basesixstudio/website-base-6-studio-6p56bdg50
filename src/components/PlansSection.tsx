@@ -15,6 +15,7 @@ import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 interface FrequenciaOpcao {
   frequencia: string
+  observacao?: string
   subtitulo: string
   beneficio: string
   whatsappMsg: string
@@ -45,6 +46,7 @@ export const PlansSection: React.FC = () => {
       frequencias: [
         {
           frequencia: '1x por semana',
+          observacao: 'Somente às Sextas-Feiras',
           subtitulo: 'Manutenção e bem-estar',
           beneficio:
             'Ideal para complementar outras atividades ou manter o corpo ativo sem sobrecarga.',
@@ -88,6 +90,7 @@ export const PlansSection: React.FC = () => {
       frequencias: [
         {
           frequencia: '1x por semana',
+          observacao: 'Somente às Sextas-Feiras',
           subtitulo: 'Sinergia inicial',
           beneficio:
             'Sessão completa unindo Pilates e vibração de corpo inteiro no mesmo cronograma.',
@@ -130,6 +133,7 @@ export const PlansSection: React.FC = () => {
       frequencias: [
         {
           frequencia: '1x por semana',
+          observacao: 'Somente às Sextas-Feiras',
           subtitulo: 'Estímulo e circulação',
           beneficio:
             'Ativação linfática e relaxamento miofascial para aliviar pernas cansadas e dores.',
@@ -325,10 +329,17 @@ export const PlansSection: React.FC = () => {
                           className="group/item block p-3.5 rounded-2xl bg-white border border-[#7FAF9C]/30 hover:border-[#2E5E4E] hover:bg-[#EAF2EF]/40 transition-all text-left shadow-2xs"
                         >
                           <div className="flex items-center justify-between gap-2">
-                            <span className="font-heading font-bold text-sm text-[#1F3D33] group-hover/item:text-[#2E5E4E] transition-colors">
-                              {freq.frequencia}
-                            </span>
-                            <span className="text-[11px] font-heading font-semibold text-[#2E5E4E] inline-flex items-center gap-1 group-hover/item:translate-x-0.5 transition-transform">
+                            <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+                              <span className="font-heading font-bold text-sm text-[#1F3D33] group-hover/item:text-[#2E5E4E] transition-colors">
+                                {freq.frequencia}
+                              </span>
+                              {freq.observacao && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-heading font-semibold bg-[#EAF2EF] text-[#2E5E4E] border border-[#7FAF9C]/40">
+                                  {freq.observacao}
+                                </span>
+                              )}
+                            </div>
+                            <span className="text-[11px] font-heading font-semibold text-[#2E5E4E] inline-flex items-center gap-1 group-hover/item:translate-x-0.5 transition-transform shrink-0">
                               <span>Consultar</span>
                               <ArrowRight className="w-3 h-3" />
                             </span>
