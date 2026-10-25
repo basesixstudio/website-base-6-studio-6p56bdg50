@@ -55,16 +55,16 @@ export const DricasVideoSection: React.FC = () => {
           {/* Card complementar com o acolhimento da Drica */}
           <div className="mt-8 bg-white rounded-[24px] p-5 sm:p-6 border border-[#7FAF9C]/40 shadow-subtle flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="flex items-center gap-3.5 text-left w-full sm:w-auto">
-              <div className="relative shrink-0">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E5E4E] bg-[#2E5E4E]/10 shadow-xs">
+              <div className="relative shrink-0 animate-drica-avatar-entrance">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#2E5E4E] bg-[#2E5E4E]/10 shadow-xs drica-avatar-interactive cursor-pointer">
                   <img
                     src={dricaInsightFoto}
                     alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz oficial do BASE 6 STUDIO em Niterói/RJ"
-                    className="w-full h-full object-cover object-[50%_15%]"
+                    className="w-full h-full object-cover object-[50%_15%] transition-transform duration-300"
                     loading="lazy"
                   />
                 </div>
-                <div className="absolute -bottom-1 -right-1 bg-[#2E5E4E] text-white p-1 rounded-full shadow-xs">
+                <div className="absolute -bottom-1 -right-1 bg-[#2E5E4E] text-white p-1 rounded-full shadow-xs pointer-events-none">
                   <Play className="w-2.5 h-2.5 fill-current" />
                 </div>
               </div>

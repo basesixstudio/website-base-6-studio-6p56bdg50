@@ -1,10 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ArrowRight, Sparkles, ChevronDown, CheckCircle2 } from 'lucide-react'
 import { getWhatsAppLink, SLOGAN_PRINCIPAL } from '@/components/StudioLogo'
 import dricaFoto from '@/assets/dricaacenando-b8441.png'
 
 export const HeroSection: React.FC = () => {
   const agendarUrl = getWhatsAppLink()
+  const [parallaxY, setParallaxY] = useState(0)
+
+  useEffect(() => {
+    // Parallax suave e leve (máx ~14px) desativado se o usuário preferir menos movimento
+    if (typeof window === 'undefined') return
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mediaQuery.matches) return
+
+    let rafId: number | null = null
+
+    const handleScroll = () => {
+      if (rafId !== null) return
+      rafId = window.requestAnimationFrame(() => {
+        const scrollY = window.scrollY
+        // Aplica apenas na faixa do hero (até ~800px)
+        if (scrollY < 900) {
+          // Deslocamento sutil em taxa baixa (0.04) para não criar jitter ou CLS
+          setParallaxY(Math.min(scrollY * 0.04, 18))
+        }
+        rafId = null
+      })
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (rafId !== null) {
+        window.cancelAnimationFrame(rafId)
+      }
+    }
+  }, [])
 
   const scrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
@@ -130,27 +161,33 @@ export const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Lado Direito: Foto Oficial da Personagem Drica ao lado do Reformer */}
+          {/* Lado Direito: Foto Oficial da Personagem Drica ao lado do Reformer com animação suave e orgânica */}
           <div className="lg:col-span-5 flex justify-center items-center relative">
-            <div className="relative w-full max-w-md flex flex-col items-center">
+            <div
+              className="relative w-full max-w-md flex flex-col items-center animate-drica-hero-entrance"
+              style={{
+                transform: parallaxY ? `translate3d(0, -${parallaxY}px, 0)` : undefined,
+                transition: 'transform 0.15s ease-out',
+              }}
+            >
               {/* Moldura orgânica de fundo com as cores oficiais */}
               <div className="absolute inset-0 rounded-[36px] bg-gradient-to-tr from-[#7FAF9C]/30 via-[#EAF2EF] to-[#2E5E4E]/20 -rotate-2 transform scale-105 pointer-events-none" />
 
-              {/* Card principal com a foto oficial da Drica */}
-              <div className="relative z-10 w-full overflow-hidden rounded-[32px] border-2 border-white shadow-organic bg-white group">
+              {/* Card principal com a foto oficial da Drica flutuando suavemente em ciclo contínuo de respiração */}
+              <div className="relative z-10 w-full overflow-hidden rounded-[32px] border-2 border-white shadow-organic bg-white group animate-drica-hero-float">
                 <div className="relative w-full aspect-[4/5] sm:aspect-[3/4] overflow-hidden bg-[#2E5E4E]/5">
-                  {/* Recorte preciso para excluir o rodapé da imagem (texto com endereço e logotipo embutidos na parte inferior do PNG) mantendo Drica e o Reformer em destaque */}
+                  {/* Recorte preciso preservado para excluir o rodapé da imagem (texto com endereço e logotipo embutidos na parte inferior do PNG) mantendo Drica e o Reformer em destaque */}
                   <img
                     src={dricaFoto}
                     alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz oficial do BASE 6 STUDIO, acenando ao lado do aparelho Reformer de Pilates no estúdio em Fonseca, Niterói/RJ"
-                    className="w-full h-[112%] max-w-none object-cover object-[center_top] -mb-[12%] select-none transition-transform duration-500 group-hover:scale-[1.03] origin-top"
+                    className="w-full h-[112%] max-w-none object-cover object-[center_top] -mb-[12%] select-none transition-transform duration-700 ease-out group-hover:scale-[1.025] origin-top"
                     loading="eager"
                   />
                 </div>
               </div>
 
-              {/* Badge flutuante destacando Fonseca • Niterói */}
-              <div className="absolute -bottom-4 -left-2 sm:left-2 bg-white rounded-2xl p-3 shadow-organic border border-[#7FAF9C]/40 z-20 flex items-center gap-2.5">
+              {/* Badge flutuante destacando Fonseca • Niterói com entrada sequenciada */}
+              <div className="absolute -bottom-4 -left-2 sm:left-2 bg-white rounded-2xl p-3 shadow-organic border border-[#7FAF9C]/40 z-20 flex items-center gap-2.5 animate-drica-badge-1">
                 <div className="w-9 h-9 rounded-full bg-[#EAF2EF] flex items-center justify-center text-[#2E5E4E]">
                   <Sparkles className="w-4 h-4 text-[#2E5E4E]" />
                 </div>
@@ -164,8 +201,8 @@ export const HeroSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Badge flutuante de acolhimento além da técnica */}
-              <div className="absolute -top-3 -right-2 bg-white rounded-full px-3.5 py-1.5 shadow-organic border border-[#7FAF9C]/40 z-20 hidden sm:flex items-center gap-1.5 text-[11px] font-heading font-semibold text-[#2E5E4E]">
+              {/* Badge flutuante de acolhimento além da técnica com entrada sequenciada */}
+              <div className="absolute -top-3 -right-2 bg-white rounded-full px-3.5 py-1.5 shadow-organic border border-[#7FAF9C]/40 z-20 hidden sm:flex items-center gap-1.5 text-[11px] font-heading font-semibold text-[#2E5E4E] animate-drica-badge-2">
                 <span>Acolhimento além da técnica</span>
               </div>
             </div>
