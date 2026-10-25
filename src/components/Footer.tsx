@@ -5,6 +5,7 @@ import {
   GOOGLE_REVIEW_URL,
   INSTAGRAM_URL,
   INSTAGRAM_HANDLE,
+  SPOTIFY_PLAYLIST_URL,
   YOUTUBE_VIDEO_URL,
   WHATSAPP_DISPLAY,
   EMAIL_DISPLAY,
@@ -77,6 +78,24 @@ export const Footer: React.FC = () => {
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                     <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </a>
+
+                <a
+                  href={SPOTIFY_PLAYLIST_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Spotify do BASE 6 STUDIO (Playlists do estúdio)"
+                  title="Playlists no Spotify"
+                  className="w-9 h-9 rounded-full bg-[#2E5E4E] border border-[#7FAF9C]/40 text-[#7FAF9C] hover:text-white hover:bg-[#7FAF9C]/25 hover:border-[#7FAF9C] flex items-center justify-center transition-all duration-200"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-4 h-4"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zm4.586 14.424a.627.627 0 0 1-.861.208c-2.358-1.441-5.326-1.767-8.823-.968a.627.627 0 1 1-.278-1.223c3.824-.874 7.104-.504 9.754 1.122a.627.627 0 0 1 .208.861zm1.225-2.724a.784.784 0 0 1-1.079.258c-2.7-1.66-6.816-2.138-10.01-1.168a.784.784 0 1 1-.453-1.5c3.649-1.107 8.193-.574 11.284 1.331a.785.785 0 0 1 .258 1.079zm.106-2.835C14.68 8.94 9.35 8.763 6.257 9.702a.94.94 0 0 1-.55-1.796c3.553-1.078 9.444-.874 13.208 1.361a.941.941 0 0 1-.998 1.604z" />
                   </svg>
                 </a>
 
@@ -248,6 +267,31 @@ export const Footer: React.FC = () => {
                   <span className="text-white/60 font-light hidden sm:inline">
                     &nbsp;(Siga nosso dia a dia)
                   </span>
+                </div>
+              </div>
+
+              {/* Spotify Playlists */}
+              <div className="flex items-center gap-3 pt-0.5">
+                <div className="w-5 h-5 flex items-center justify-center shrink-0">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-4 h-4 text-[#7FAF9C]"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2C6.477 2 2 6.477 2 12c0 5.522 4.477 10 10 10s10-4.478 10-10c0-5.523-4.477-10-10-10zm4.586 14.424a.627.627 0 0 1-.861.208c-2.358-1.441-5.326-1.767-8.823-.968a.627.627 0 1 1-.278-1.223c3.824-.874 7.104-.504 9.754 1.122a.627.627 0 0 1 .208.861zm1.225-2.724a.784.784 0 0 1-1.079.258c-2.7-1.66-6.816-2.138-10.01-1.168a.784.784 0 1 1-.453-1.5c3.649-1.107 8.193-.574 11.284 1.331a.785.785 0 0 1 .258 1.079zm.106-2.835C14.68 8.94 9.35 8.763 6.257 9.702a.94.94 0 0 1-.55-1.796c3.553-1.078 9.444-.874 13.208 1.361a.941.941 0 0 1-.998 1.604z" />
+                  </svg>
+                </div>
+                <div className="text-xs sm:text-sm leading-snug">
+                  <span className="text-white/80 font-light">Spotify:&nbsp;</span>
+                  <a
+                    href={SPOTIFY_PLAYLIST_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#7FAF9C] underline-offset-2 hover:underline transition-colors font-medium text-[#7FAF9C]"
+                  >
+                    Playlists do estúdio
+                  </a>
                 </div>
               </div>
 

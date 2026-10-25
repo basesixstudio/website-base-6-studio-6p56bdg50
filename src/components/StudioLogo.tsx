@@ -4,6 +4,8 @@ import logoOficial from '@/assets/logo-base-6-studio-verde-0c93f.png'
 export const GOOGLE_REVIEW_URL = 'https://g.page/r/CfZGmm7KDJXfEBM/review'
 export const INSTAGRAM_URL = 'https://www.instagram.com/base6studio/'
 export const INSTAGRAM_HANDLE = '@base6studio'
+export const SPOTIFY_PLAYLIST_URL =
+  'https://open.spotify.com/user/31l4ny3an7j5et6whgq75zcfsfne?si=hZrt_VWcSRukPcFhlEK4_Q'
 export const YOUTUBE_VIDEO_URL = 'https://youtu.be/fAXWaW8qzto'
 export const WHATSAPP_URL = 'https://wa.me/5521994448482'
 export const WHATSAPP_DISPLAY = '(21) 99444-8482'
