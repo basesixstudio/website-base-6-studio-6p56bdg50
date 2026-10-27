@@ -351,19 +351,22 @@ export const ContactFormSection: React.FC = () => {
               </div>
             </a>
 
-            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#F4F8F6]/60 border border-gray-100 text-sm text-[#1F3D33]">
-              <div className="w-10 h-10 rounded-full bg-[#EAF2EF] text-[#2E5E4E] flex items-center justify-center shrink-0">
+            <a
+              href={`mailto:${EMAIL_DISPLAY}`}
+              className="flex items-center gap-3 p-4 rounded-2xl bg-[#F4F8F6]/60 border border-gray-100 hover:border-[#7FAF9C] hover:bg-[#EAF2EF] transition-all text-sm text-[#1F3D33] group"
+            >
+              <div className="w-10 h-10 rounded-full bg-[#EAF2EF] group-hover:bg-[#2E5E4E] text-[#2E5E4E] group-hover:text-white flex items-center justify-center transition-colors shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
               <div className="min-w-0">
                 <span className="text-xs text-[#7FAF9C] font-semibold block truncate">
                   E-mail Oficial
                 </span>
-                <span className="font-heading font-medium text-sm text-[#1F3D33] truncate block">
+                <span className="font-heading font-bold text-sm text-[#1F3D33] truncate block">
                   {EMAIL_DISPLAY}
                 </span>
               </div>
-            </div>
+            </a>
 
             <a
               href={INSTAGRAM_URL}
