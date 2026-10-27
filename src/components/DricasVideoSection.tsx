@@ -69,7 +69,7 @@ export const DricasVideoSection: React.FC = () => {
                   {/* Legenda sobreposta na base da foto */}
                   <div className="absolute bottom-4 left-4 right-4 text-white z-10 pointer-events-none">
                     <p className="text-base sm:text-lg font-bold font-heading leading-tight drop-shadow-xs text-white">
-                      Drica • Porta-voz BASE 6 STUDIO
+                      Drica
                     </p>
                   </div>
                 </div>
@@ -94,7 +94,7 @@ export const DricasVideoSection: React.FC = () => {
             {/* Subtítulo em destaque com a frase solicitada */}
             <div className="space-y-3">
               <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#1F3D33] leading-snug">
-                Drica: mais de +23 anos de experiência cuidando de quem você é
+                Mais de +23 anos de experiência cuidando de quem você é
               </h3>
               <p className="text-sm sm:text-base font-semibold text-[#2E5E4E] leading-relaxed">
                 Profissional de Educação Física especializada em Pilates e plataforma vibratória,

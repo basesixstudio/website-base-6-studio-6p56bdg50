@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { ArrowRight, Sparkles, ChevronDown, CheckCircle2 } from 'lucide-react'
-import { getWhatsAppLink, SLOGAN_PRINCIPAL } from '@/components/StudioLogo'
+import { getWhatsAppLink } from '@/components/StudioLogo'
 import dricaFoto from '@/assets/dricaacenando-b8441.png'
 
 export const HeroSection: React.FC = () => {
@@ -73,7 +73,7 @@ export const HeroSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/95 border border-[#7FAF9C]/40 shadow-xs">
               <span className="w-2 h-2 rounded-full bg-[#2E5E4E] animate-ping" />
               <span className="text-xs font-semibold font-heading text-[#2E5E4E] tracking-wide">
-                Fonseca, Niterói • {SLOGAN_PRINCIPAL}
+                Fonseca, Niterói/RJ • Rua Des. Lima Castro, 126.
               </span>
             </div>
 
@@ -184,26 +184,6 @@ export const HeroSection: React.FC = () => {
                     loading="eager"
                   />
                 </div>
-              </div>
-
-              {/* Badge flutuante destacando Fonseca • Niterói com entrada sequenciada */}
-              <div className="absolute -bottom-4 -left-2 sm:left-2 bg-white rounded-2xl p-3 shadow-organic border border-[#7FAF9C]/40 z-20 flex items-center gap-2.5 animate-drica-badge-1">
-                <div className="w-9 h-9 rounded-full bg-[#EAF2EF] flex items-center justify-center text-[#2E5E4E]">
-                  <Sparkles className="w-4 h-4 text-[#2E5E4E]" />
-                </div>
-                <div className="text-left">
-                  <p className="text-xs font-heading font-bold text-[#1F3D33]">
-                    Fonseca • Niterói/RJ
-                  </p>
-                  <p className="text-[10px] text-[#2E5E4E] font-medium">
-                    Rua Des. Lima Castro, 126
-                  </p>
-                </div>
-              </div>
-
-              {/* Badge flutuante de acolhimento além da técnica com entrada sequenciada */}
-              <div className="absolute -top-3 -right-2 bg-white rounded-full px-3.5 py-1.5 shadow-organic border border-[#7FAF9C]/40 z-20 hidden sm:flex items-center gap-1.5 text-[11px] font-heading font-semibold text-[#2E5E4E] animate-drica-badge-2">
-                <span>Acolhimento além da técnica</span>
               </div>
             </div>
           </div>
