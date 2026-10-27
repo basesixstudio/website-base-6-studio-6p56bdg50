@@ -1,16 +1,6 @@
 import React from 'react'
-import {
-  Activity,
-  Zap,
-  Sparkles,
-  CheckCircle2,
-  Calendar,
-  MessageCircle,
-  ShieldCheck,
-  Check,
-} from 'lucide-react'
+import { Activity, Zap, Sparkles, CheckCircle2, Calendar, MessageCircle, Check } from 'lucide-react'
 import { getWhatsAppLink } from '@/components/StudioLogo'
-import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
 
 interface FrequenciaOpcao {
   frequencia: string
@@ -261,45 +251,6 @@ export const PlansSection: React.FC = () => {
               </div>
             )
           })}
-        </div>
-
-        {/* Convite final acolhedor da Drica (enxuto) */}
-        <div className="mt-10 sm:mt-12 p-5 sm:p-6 rounded-[28px] bg-gradient-to-r from-[#EAF2EF] via-[#F4F8F6] to-[#EAF2EF] border border-[#7FAF9C]/50 shadow-subtle flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
-          <div className="flex items-center gap-4 max-w-2xl">
-            <div className="w-13 h-13 rounded-full overflow-hidden border-2 border-[#2E5E4E] bg-[#2E5E4E]/10 shrink-0 shadow-xs hidden sm:block">
-              <img
-                src={dricaInsightFoto}
-                alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz do BASE 6 STUDIO em Niterói"
-                className="w-full h-full object-cover object-[50%_15%]"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex flex-col gap-1">
-              <div className="inline-flex items-center gap-1.5 text-xs font-heading font-bold text-[#2E5E4E] uppercase tracking-wider justify-center md:justify-start">
-                <ShieldCheck className="w-4 h-4 text-[#2E5E4E]" />
-                Atendimento com a Drica
-              </div>
-              <h4 className="font-heading font-bold text-lg sm:text-xl text-[#1F3D33] leading-snug">
-                Dúvidas sobre o plano ideal para você?
-              </h4>
-              <p className="text-xs sm:text-sm text-[#1F3D33]/85 leading-relaxed font-normal">
-                Fale diretamente conosco no WhatsApp. Passamos os valores dos planos mensal,
-                trimestral, semestral e anual e tiramos todas as suas dúvidas com carinho.
-              </p>
-            </div>
-          </div>
-
-          <a
-            href={getWhatsAppLink(
-              'Olá! Vim pelo site do BASE 6 STUDIO e gostaria de conversar com a Drica sobre os planos. 🌿',
-            )}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="shrink-0 inline-flex items-center justify-center gap-2 bg-[#2E5E4E] hover:bg-[#1F3D33] text-white px-6 py-3.5 rounded-full font-heading font-semibold text-sm shadow-organic hover:shadow-organic-lg transition-all duration-200 hover:scale-[1.02] active:scale-98 text-center"
-          >
-            <MessageCircle className="w-4 h-4" />
-            <span>Falar com a Drica</span>
-          </a>
         </div>
       </div>
     </section>
