@@ -22,7 +22,6 @@ export const DricasVideoSection: React.FC = () => {
     'Profissional de Educação Física com mais de +23 anos de experiência',
     'Especialista em Pilates e no trabalho com plataforma vibratória',
     'Atuação dedicada ao público da melhor idade',
-    'Responsável técnica do BASE 6 STUDIO',
   ]
 
   return (
@@ -60,7 +59,7 @@ export const DricasVideoSection: React.FC = () => {
                 <div className="relative aspect-[4/5] rounded-[28px] sm:rounded-[34px] overflow-hidden bg-[#1F3D33] shadow-inner animate-drica-avatar-entrance">
                   <img
                     src={dricaInsightFoto}
-                    alt="Prof.ª Adriana Mello de Lima (Drica), porta-voz oficial e Responsável Técnica do BASE 6 STUDIO em Niterói/RJ"
+                    alt="Drica, porta-voz do BASE 6 STUDIO em Niterói/RJ"
                     className="w-full h-full object-cover object-[50%_15%] drica-avatar-interactive cursor-pointer select-none"
                     loading="lazy"
                   />
@@ -69,11 +68,8 @@ export const DricasVideoSection: React.FC = () => {
 
                   {/* Legenda sobreposta na base da foto */}
                   <div className="absolute bottom-4 left-4 right-4 text-white z-10 pointer-events-none">
-                    <p className="text-base sm:text-lg font-bold font-heading leading-tight drop-shadow-xs">
-                      Prof.ª Adriana Mello de Lima (Drica)
-                    </p>
-                    <p className="text-xs text-[#7FAF9C] font-heading font-medium mt-0.5 drop-shadow-xs">
-                      CREF 013832-G/RJ • Responsável Técnica
+                    <p className="text-base sm:text-lg font-bold font-heading leading-tight drop-shadow-xs text-white">
+                      Drica • Porta-voz BASE 6 STUDIO
                     </p>
                   </div>
                 </div>
