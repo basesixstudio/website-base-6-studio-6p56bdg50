@@ -19,6 +19,7 @@ import {
   INSTAGRAM_HANDLE,
 } from '@/components/StudioLogo'
 import dricaInsightFoto from '@/assets/dricainsight-a719e.png'
+import dricaWelcomeFoto from '@/assets/dricasejambem-vindos-acb6c.png'
 
 const OPCOES_NECESSIDADE: NecessidadeTipo[] = [
   'Pilates Contemporâneo',
@@ -108,47 +109,90 @@ export const ContactFormSection: React.FC = () => {
   return (
     <section id="contato" className="py-20 bg-white relative overflow-hidden">
       <div className="container mx-auto max-w-5xl px-4 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Lado Esquerdo: Texto explicativo e acolhimento da Drica */}
-          <div className="lg:col-span-5 flex flex-col gap-6 text-left">
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EAF2EF] text-[#2E5E4E] text-xs font-heading font-semibold uppercase tracking-wider mb-3 border border-[#7FAF9C]/30">
-                <Sparkles className="w-3 h-3 text-[#2E5E4E]" />
-                Primeiro Passo
-              </div>
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
-                Agende sua visita: Diga um oi para a Drica.
-              </h2>
-              <p className="text-base text-[#1F3D33]/80 mt-3 leading-relaxed">
-                Preencha o formulário e nós retornamos com carinho. Conheça nosso estúdio no
-                Fonseca, Niterói/RJ, ouvindo sua história e apresentando a melhor alternativa para
-                seu momento.
-              </p>
-            </div>
+        {/* Cabeçalho da seção */}
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-14">
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-[#EAF2EF] text-[#2E5E4E] text-xs font-heading font-semibold uppercase tracking-wider mb-3 border border-[#7FAF9C]/30">
+            <Sparkles className="w-3 h-3 text-[#2E5E4E]" />
+            Primeiro Passo
+          </div>
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
+            Agende sua visita: Diga um oi para a Drica.
+          </h2>
+          <p className="text-base text-[#1F3D33]/80 mt-3 leading-relaxed">
+            Preencha o formulário e nós retornamos com carinho. Conheça nosso estúdio no Fonseca,
+            Niterói/RJ, ouvindo sua história e apresentando a melhor alternativa para seu momento.
+          </p>
+        </div>
 
-            {/* Balão informativo Dica da Drica */}
-            <div className="p-5 rounded-2xl bg-[#F4F8F6] border border-[#7FAF9C]/40 flex items-start gap-3.5 shadow-xs">
-              <div className="w-11 h-11 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5 bg-[#2E5E4E]/10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+          {/* Lado Esquerdo (Desktop) / Acima (Mobile): Card de boas-vindas com a Drica na porta da Base */}
+          <div className="lg:col-span-5 flex flex-col justify-between">
+            {/* Card de Boas-Vindas */}
+            <div className="bg-[#F4F8F6] rounded-[32px] border border-[#7FAF9C]/40 shadow-organic overflow-hidden flex flex-col h-full">
+              {/* Imagem da Drica dando boas-vindas na porta */}
+              <div className="relative w-full aspect-[4/5] sm:aspect-[1/1] lg:aspect-[4/5] max-h-[460px] overflow-hidden bg-[#1F3D33]">
                 <img
-                  src={dricaInsightFoto}
-                  alt="Drica, Profissional de Educação Física do BASE 6 STUDIO Fonseca Niterói"
-                  className="w-full h-full object-cover object-[50%_15%]"
+                  src={dricaWelcomeFoto}
+                  alt="Drica, Porta-voz & Profissional de Educação Física do BASE 6 STUDIO, dando boas-vindas na porta do estúdio"
+                  className="w-full h-full object-cover object-[50%_20%] select-none hover:scale-[1.02] transition-transform duration-500 ease-out"
                   loading="lazy"
                 />
+                <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1F3D33]/90 via-[#1F3D33]/40 to-transparent pointer-events-none" />
+
+                {/* Tag flutuante sobre a imagem */}
+                <div className="absolute top-4 left-4 z-10">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[#2E5E4E] text-[11px] font-heading font-bold uppercase tracking-wider shadow-xs border border-[#7FAF9C]/30">
+                    <Sparkles className="w-3 h-3 text-[#2E5E4E]" />
+                    Porta Aberta
+                  </span>
+                </div>
+
+                {/* Frase de efeito em destaque sobre o rodapé da foto */}
+                <div className="absolute bottom-4 left-5 right-5 text-white z-10 pointer-events-none">
+                  <p className="font-heading font-bold text-xl sm:text-2xl leading-tight text-white drop-shadow-md">
+                    "Sejam bem-vindos à nossa Base!"
+                  </p>
+                  <p className="text-xs text-[#7FAF9C] font-heading font-semibold mt-1 drop-shadow-xs">
+                    Drica • BASE 6 STUDIO
+                  </p>
+                </div>
               </div>
-              <div className="flex flex-col gap-1">
-                <span className="text-[11px] font-heading font-bold text-[#2E5E4E] uppercase tracking-wider">
-                  Dica da Drica
-                </span>
-                <p className="text-xs sm:text-sm text-[#1F3D33] leading-relaxed">
-                  "Você não precisa chegar sabendo o método. Nossa conversa começa pelo que você
-                  sente hoje e onde deseja chegar com saúde e liberdade."
+
+              {/* Mensagem acolhedora complementar da Drica */}
+              <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 gap-4">
+                <p className="text-sm sm:text-base text-[#1F3D33] leading-relaxed font-body">
+                  Aqui, movimento, saúde e cuidado caminham juntos — e a gente recebe cada pessoa
+                  pelo nome. Nossa porta está sempre aberta para você começar no seu ritmo, com
+                  segurança e leveza.
                 </p>
+
+                {/* Balão Dica rápida */}
+                <div className="p-4 rounded-2xl bg-white border border-[#7FAF9C]/35 flex items-start gap-3 shadow-2xs">
+                  <div className="w-9 h-9 rounded-full overflow-hidden border border-[#2E5E4E] shrink-0 mt-0.5 bg-[#2E5E4E]/10">
+                    <img
+                      src={dricaInsightFoto}
+                      alt="Drica"
+                      className="w-full h-full object-cover object-[50%_15%]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-0.5">
+                    <span className="text-[10px] font-heading font-bold text-[#2E5E4E] uppercase tracking-wider">
+                      Dica da Drica
+                    </span>
+                    <p className="text-xs text-[#1F3D33]/90 leading-snug">
+                      "Você não precisa chegar sabendo o método. Venha tomar um café conosco e vamos
+                      conversar sobre o seu bem-estar."
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
 
-            {/* Links rápidos */}
-            <div className="space-y-3 pt-1">
+          {/* Lado Direito: Formulário com visual acolhedor */}
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            <div className="bg-[#F4F8F6] p-8 sm:p-10 rounded-[32px] border border-[#7FAF9C]/40 shadow-organic h-full flex flex-col justify-center">
               <a
                 href={getWhatsAppLink()}
                 target="_blank"
@@ -351,6 +395,77 @@ export const ContactFormSection: React.FC = () => {
                 </form>
               )}
             </div>
+          </div>
+        </div>
+
+        {/* Canais rápidos de contato abaixo dos cards */}
+        <div className="mt-12 pt-8 border-t border-[#7FAF9C]/25">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a
+              href={getWhatsAppLink()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 rounded-2xl bg-[#F4F8F6]/60 border border-gray-100 hover:border-[#7FAF9C] hover:bg-[#EAF2EF] transition-all text-sm text-[#1F3D33] group"
+            >
+              <div className="w-10 h-10 rounded-full bg-[#EAF2EF] group-hover:bg-[#2E5E4E] text-[#2E5E4E] group-hover:text-white flex items-center justify-center transition-colors shrink-0">
+                <MessageCircle className="w-5 h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs text-[#7FAF9C] font-semibold block truncate">
+                  WhatsApp Direto
+                </span>
+                <span className="font-heading font-bold text-sm text-[#1F3D33] truncate block">
+                  {WHATSAPP_DISPLAY}
+                </span>
+              </div>
+            </a>
+
+            <div className="flex items-center gap-3 p-4 rounded-2xl bg-[#F4F8F6]/60 border border-gray-100 text-sm text-[#1F3D33]">
+              <div className="w-10 h-10 rounded-full bg-[#EAF2EF] text-[#2E5E4E] flex items-center justify-center shrink-0">
+                <Mail className="w-5 h-5" />
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs text-[#7FAF9C] font-semibold block truncate">
+                  E-mail Oficial
+                </span>
+                <span className="font-heading font-medium text-sm text-[#1F3D33] truncate block">
+                  {EMAIL_DISPLAY}
+                </span>
+              </div>
+            </div>
+
+            <a
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram do BASE 6 STUDIO"
+              className="flex items-center gap-3 p-4 rounded-2xl bg-[#F4F8F6]/60 border border-gray-100 hover:border-[#7FAF9C] hover:bg-[#EAF2EF] transition-all text-sm text-[#1F3D33] group"
+            >
+              <div className="w-10 h-10 rounded-full bg-[#EAF2EF] group-hover:bg-[#2E5E4E] text-[#2E5E4E] group-hover:text-white flex items-center justify-center transition-colors shrink-0">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="w-5 h-5"
+                  aria-hidden="true"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
+              </div>
+              <div className="min-w-0">
+                <span className="text-xs text-[#7FAF9C] font-semibold block truncate">
+                  Siga no Instagram
+                </span>
+                <span className="font-heading font-bold text-sm text-[#1F3D33] group-hover:text-[#2E5E4E] transition-colors truncate block">
+                  {INSTAGRAM_HANDLE}
+                </span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
