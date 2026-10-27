@@ -25,7 +25,7 @@ export const PlansSection: React.FC = () => {
     {
       id: 'pilates',
       titulo: 'Pilates',
-      subtituloModalidade: 'Pilates Contemporâneo em Aparelhos',
+      subtituloModalidade: 'Pilates em Aparelhos',
       descricao:
         'Aulas personalizadas com foco em fortalecimento do core, alinhamento postural, flexibilidade e reabilitação motora no Fonseca.',
       icone: <Activity className="w-6 h-6 text-[#2E5E4E]" />,

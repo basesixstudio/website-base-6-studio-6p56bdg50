@@ -30,7 +30,7 @@ export const ServicesSection: React.FC = () => {
     },
     {
       id: 'fisioterapia',
-      titulo: 'Pilates Clínico & Reabilitação',
+      titulo: 'Pilates Clínico (Reabilitação)',
       descricao:
         'Cuidado focado no alívio de dores na coluna, hérnias, artrose e lesões musculoesqueléticas, com atendimento individualizado e supervisão rigorosa.',
       icone: <Stethoscope className="w-6 h-6 text-[#2E5E4E]" />,
