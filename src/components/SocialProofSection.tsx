@@ -81,13 +81,9 @@ export const SocialProofSection: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5 text-[#2E5E4E]" />
             Depoimentos & Conquistas
           </div>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
+          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight mb-4">
             Quem já transformou sua rotina nesta base em Niterói
           </h2>
-          <p className="font-heading font-medium text-base text-[#2E5E4E] mt-3 mb-4">
-            Histórias reais de alunos de Niterói e Fonseca que transformaram dores em saúde, força e
-            autonomia.
-          </p>
 
           {/* Selo discreto com link para avaliações no Google */}
           <div className="flex items-center justify-center">

@@ -43,10 +43,6 @@ export const DricasVideoSection: React.FC = () => {
           <h2 className="font-heading font-bold text-3xl sm:text-4xl text-[#1F3D33] leading-tight">
             Quem é Drica
           </h2>
-          <p className="font-heading font-medium text-base sm:text-lg text-[#2E5E4E] mt-3 max-w-2xl mx-auto">
-            Profissional de Educação Física especializada em Pilates e plataforma vibratória, com
-            atuação dedicada ao público da melhor idade.
-          </p>
         </div>
 
         {/* Bloco Principal em 2 Colunas: Foto/Avatar + História e Credenciais */}
@@ -96,12 +92,7 @@ export const DricasVideoSection: React.FC = () => {
               <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#1F3D33] leading-snug">
                 Mais de +23 anos de experiência cuidando de quem você é
               </h3>
-              <p className="text-sm sm:text-base font-semibold text-[#2E5E4E] leading-relaxed">
-                Profissional de Educação Física especializada em Pilates e plataforma vibratória,
-                com atuação dedicada ao público da melhor idade.
-              </p>
             </div>
-
             {/* Parágrafos de abertura */}
             <div className="space-y-4 text-base sm:text-lg text-[#1F3D33]/90 leading-relaxed font-body">
               <p>
