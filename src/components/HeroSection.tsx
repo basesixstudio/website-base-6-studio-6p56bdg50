@@ -183,6 +183,15 @@ export const HeroSection: React.FC = () => {
                     className="w-full h-[112%] max-w-none object-cover object-[center_top] -mb-[12%] select-none transition-transform duration-700 ease-out group-hover:scale-[1.025] origin-top"
                     loading="eager"
                   />
+                  {/* Gradiente sutil na base da foto para legibilidade */}
+                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1F3D33]/85 via-[#1F3D33]/30 to-transparent pointer-events-none" />
+
+                  {/* Assinatura "Drica" sobreposta na base da foto */}
+                  <div className="absolute bottom-4 left-4 right-4 text-white z-10 pointer-events-none">
+                    <p className="text-base sm:text-lg font-bold font-heading leading-tight drop-shadow-xs text-white">
+                      Drica
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
