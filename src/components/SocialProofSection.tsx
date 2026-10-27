@@ -128,7 +128,7 @@ export const SocialProofSection: React.FC = () => {
           <div className="bg-white rounded-[24px] p-6 text-center border border-[#7FAF9C]/40 shadow-organic flex flex-col justify-between">
             <div>
               <div className="font-heading font-bold text-4xl sm:text-5xl text-[#2E5E4E]">
-                {countEdFisica} anos
+                +{countEdFisica} anos
               </div>
               <p className="text-sm font-heading font-semibold text-[#1F3D33] mt-2">
                 como Profissional de Educação Física

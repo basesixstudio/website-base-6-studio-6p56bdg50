@@ -19,7 +19,7 @@ export const DricasVideoSection: React.FC = () => {
   )
 
   const credenciais = [
-    'Profissional de Educação Física com mais de 25 anos de experiência',
+    'Profissional de Educação Física com mais de +23 anos de experiência',
     'Especialista em Pilates e no trabalho com plataforma vibratória',
     'Atuação dedicada ao público da melhor idade',
     'Responsável técnica do BASE 6 STUDIO',
@@ -87,7 +87,7 @@ export const DricasVideoSection: React.FC = () => {
                 </span>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-[#1F3D33] text-xs font-heading font-semibold border border-[#7FAF9C]/40 shadow-2xs">
                   <Award className="w-4 h-4 text-[#2E5E4E]" />
-                  +25 anos de experiência
+                  +23 anos
                 </span>
               </div>
             </div>
@@ -98,7 +98,7 @@ export const DricasVideoSection: React.FC = () => {
             {/* Subtítulo em destaque com a frase solicitada */}
             <div className="space-y-3">
               <h3 className="font-heading font-bold text-2xl sm:text-3xl text-[#1F3D33] leading-snug">
-                Drica: mais de 25 anos de experiência cuidando de quem você é
+                Drica: mais de +23 anos de experiência cuidando de quem você é
               </h3>
               <p className="text-sm sm:text-base font-semibold text-[#2E5E4E] leading-relaxed">
                 Profissional de Educação Física especializada em Pilates e plataforma vibratória,
@@ -113,7 +113,7 @@ export const DricasVideoSection: React.FC = () => {
                 cuidar do corpo é, antes de tudo, cuidar de uma história.
               </p>
               <p>
-                Com mais de 25 anos de experiência em Educação Física, ela construiu uma trajetória
+                Com mais de +23 anos de experiência em Educação Física, ela construiu uma trajetória
                 dedicada ao movimento consciente e, sobretudo, às pessoas que descobrem o prazer de
                 se mover — ou que retomam esse encontro depois de um tempo. Foi entre elas que
                 encontrou sua vocação: uma presença que é, ao mesmo tempo, firme e suave.
