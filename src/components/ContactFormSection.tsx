@@ -139,21 +139,13 @@ export const ContactFormSection: React.FC = () => {
                 />
                 <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#1F3D33]/90 via-[#1F3D33]/40 to-transparent pointer-events-none" />
 
-                {/* Tag flutuante sobre a imagem */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-xs text-[#2E5E4E] text-[11px] font-heading font-bold uppercase tracking-wider shadow-xs border border-[#7FAF9C]/30">
-                    <Sparkles className="w-3 h-3 text-[#2E5E4E]" />
-                    Porta Aberta
-                  </span>
-                </div>
-
                 {/* Frase de efeito em destaque sobre o rodapé da foto */}
                 <div className="absolute bottom-4 left-5 right-5 text-white z-10 pointer-events-none">
                   <p className="font-heading font-bold text-xl sm:text-2xl leading-tight text-white drop-shadow-md">
                     "Sejam bem-vindos à nossa Base!"
                   </p>
-                  <p className="text-xs text-[#7FAF9C] font-heading font-semibold mt-1 drop-shadow-xs">
-                    Drica • BASE 6 STUDIO
+                  <p className="text-base sm:text-lg font-bold font-heading leading-tight drop-shadow-xs text-white mt-1">
+                    Drica
                   </p>
                 </div>
               </div>
