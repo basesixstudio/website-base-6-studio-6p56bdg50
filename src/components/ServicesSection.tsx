@@ -24,7 +24,7 @@ export const ServicesSection: React.FC = () => {
       id: 'pilates',
       titulo: 'Pilates Contemporâneo',
       descricao:
-        'Método moderno em aparelhos completos (Reformer, Cadillac, Cadeira e Barril) que fortalece o core, melhora a postura e devolve mobilidade funcional',
+        'Método moderno em aparelhos completos (Reformer, Cadillac, Cadeira e Barril) que fortalece o core, melhora a postura e devolve mobilidade funcional.',
       icone: <Activity className="w-6 h-6 text-[#2E5E4E]" />,
       tag: 'Principal',
     },
