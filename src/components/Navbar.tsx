@@ -22,7 +22,7 @@ export const Navbar: React.FC = () => {
     { label: 'Serviços', href: '/#servicos' },
     { label: 'Princípios', href: '/#principios' },
     { label: 'Depoimentos', href: '/#depoimentos' },
-    { label: 'Dicas da Drica', href: '/#dicas-da-drica' },
+    { label: 'Quem é Drica', href: '/#dicas-da-drica' },
     { label: 'FAQ', href: '/#faq' },
     { label: 'Planos', href: '/#planos' },
     { label: 'Contato', href: '/#contato' },

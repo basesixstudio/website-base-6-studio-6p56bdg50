@@ -174,7 +174,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="/#dicas-da-drica" className="hover:text-[#7FAF9C] transition-colors">
-                  Dicas da Drica
+                  Quem é Drica
                 </a>
               </li>
               <li>

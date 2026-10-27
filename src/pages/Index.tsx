@@ -23,7 +23,7 @@ const Index: React.FC = () => {
       {/* 4. Prova social (depoimentos, contadores animados, frase Drica) */}
       <SocialProofSection />
 
-      {/* 5. Seção de vídeo "Dicas da Drica" (YouTube embed fAXWaW8qzto) */}
+      {/* 5. Seção "Quem é Drica" (Apresentação, Credenciais + Vídeo "Dica da Drica") */}
       <DricasVideoSection />
 
       {/* 6. Perguntas Frequentes (FAQ otimizado para SEO e buscas por IA) */}
