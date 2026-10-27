@@ -27,7 +27,7 @@ export const PlansSection: React.FC = () => {
       titulo: 'Pilates',
       subtituloModalidade: 'Pilates em Aparelhos',
       descricao:
-        'Aulas personalizadas com foco em fortalecimento do core, alinhamento postural, flexibilidade e reabilitação motora no Fonseca.',
+        'Aulas personalizadas com foco em fortalecimento do core, alinhamento postural, flexibilidade e reabilitação motora.',
       icone: <Activity className="w-6 h-6 text-[#2E5E4E]" />,
       frequencias: [
         {
