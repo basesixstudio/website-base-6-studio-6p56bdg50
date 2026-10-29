@@ -28,13 +28,22 @@ export interface NovoContatoData {
   status?: StatusContato
 }
 
-// Sanitização básica contra scripts e caracteres invisíveis indesejados em strings
+// Sanitização contra scripts, tags HTML e caracteres de controle indesejados
 export function sanitizarTexto(input: string, maxLen = 500): string {
   if (!input) return ''
-  return input
-    .replace(/[\r\n\t]+/g, ' ')
-    .trim()
-    .slice(0, maxLen)
+  // Remove tags HTML
+  const semHtml = input.replace(/<[^>]*>?/gm, '')
+  // Filtra caracteres de controle sem regex literal que acione no-control-regex
+  let limpo = ''
+  for (let i = 0; i < semHtml.length; i++) {
+    const code = semHtml.charCodeAt(i)
+    if ((code >= 0 && code <= 31) || code === 127) {
+      limpo += ' '
+    } else {
+      limpo += semHtml[i]
+    }
+  }
+  return limpo.replace(/\s+/g, ' ').trim().slice(0, maxLen)
 }
 
 export async function criarContato(data: NovoContatoData): Promise<ContatoRecord> {

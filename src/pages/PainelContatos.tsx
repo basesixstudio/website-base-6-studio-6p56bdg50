@@ -60,10 +60,22 @@ export const PainelContatos: React.FC = () => {
   const [novaNecessidade, setNovaNecessidade] = useState<NecessidadeTipo>('Aula Experimental')
   const [salvandoNovo, setSalvandoNovo] = useState(false)
 
-  // 1. Verificação de autenticação
+  // 1. Verificação de autenticação com checagem de expiração do JWT
   useEffect(() => {
     if (!pb.authStore.isValid) {
       navigate('/painel/login', { replace: true })
+      return
+    }
+
+    try {
+      const token = pb.authStore.token
+      const payload = JSON.parse(atob(token.split('.')[1] || '{}'))
+      if (payload.exp && payload.exp * 1000 < Date.now()) {
+        pb.authStore.clear()
+        navigate('/painel/login', { replace: true })
+      }
+    } catch {
+      // Ignora erro de parsing
     }
   }, [navigate])
 

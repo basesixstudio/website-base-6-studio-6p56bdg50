@@ -103,6 +103,7 @@ export const RedefinirSenha: React.FC = () => {
                   type="password"
                   required
                   minLength={8}
+                  autoComplete="new-password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
@@ -119,6 +120,7 @@ export const RedefinirSenha: React.FC = () => {
                   type="password"
                   required
                   minLength={8}
+                  autoComplete="new-password"
                   value={passwordConfirm}
                   onChange={(e) => setPasswordConfirm(e.target.value)}
                   placeholder="••••••••"

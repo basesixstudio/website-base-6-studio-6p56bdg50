@@ -4,7 +4,6 @@ import { Lock, Mail, ArrowRight, Loader2, Sparkles, AlertCircle } from 'lucide-r
 import pb from '@/lib/pocketbase/client'
 import { StudioLogo } from '@/components/StudioLogo'
 import { useToast } from '@/hooks/use-toast'
-
 import { useNoIndex } from '@/hooks/use-no-index'
 
 export const PainelLogin: React.FC = () => {
@@ -15,10 +14,23 @@ export const PainelLogin: React.FC = () => {
   const [email, setEmail] = useState('basesixstudio@gmail.com')
   const [password, setPassword] = useState('Skip@Pass')
   const [carregando, setCarregando] = useState(false)
+  const [tentativas, setTentativas] = useState(0)
+  const [bloqueadoAte, setBloqueadoAte] = useState<number | null>(null)
   const [erro, setErro] = useState<string | null>(null)
 
   useEffect(() => {
     if (pb.authStore.isValid) {
+      // Validar expiração antes de redirecionar direto
+      try {
+        const token = pb.authStore.token
+        const payload = JSON.parse(atob(token.split('.')[1] || '{}'))
+        if (payload.exp && payload.exp * 1000 < Date.now()) {
+          pb.authStore.clear()
+          return
+        }
+      } catch {
+        // Ignorar
+      }
       navigate('/painel', { replace: true })
     }
   }, [navigate])
@@ -26,6 +38,14 @@ export const PainelLogin: React.FC = () => {
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
     setErro(null)
+
+    if (bloqueadoAte && Date.now() < bloqueadoAte) {
+      const segundosRestantes = Math.ceil((bloqueadoAte - Date.now()) / 1000)
+      setErro(
+        `Muitas tentativas incorretas. Aguarde ${segundosRestantes} segundos antes de tentar novamente.`,
+      )
+      return
+    }
 
     if (!email || !password) {
       setErro('Preencha e-mail e senha para acessar.')
@@ -35,15 +55,26 @@ export const PainelLogin: React.FC = () => {
     setCarregando(true)
     try {
       await pb.collection('users').authWithPassword(email.trim(), password)
+      setTentativas(0)
+      setBloqueadoAte(null)
       toast({
         title: 'Bem-vinda, Drica!',
         description: 'Login realizado com sucesso. Carregando os contatos...',
         className: 'bg-[#2E7D32] text-white border-none',
       })
       navigate('/painel', { replace: true })
-    } catch (err) {
-      console.error('Erro de autenticação:', err)
-      setErro('E-mail ou senha incorretos. Verifique suas credenciais.')
+    } catch {
+      const novaContagem = tentativas + 1
+      setTentativas(novaContagem)
+      if (novaContagem >= 5) {
+        const timeoutMs = 30000 // Bloqueia 30 segundos após 5 tentativas
+        setBloqueadoAte(Date.now() + timeoutMs)
+        setErro(
+          'Muitas tentativas incorretas. Acesso bloqueado por 30 segundos para sua segurança.',
+        )
+      } else {
+        setErro('E-mail ou senha incorretos. Verifique suas credenciais.')
+      }
     } finally {
       setCarregando(false)
     }
@@ -80,6 +111,7 @@ export const PainelLogin: React.FC = () => {
               <input
                 type="email"
                 required
+                autoComplete="username"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="basesixstudio@gmail.com"
@@ -103,6 +135,7 @@ export const PainelLogin: React.FC = () => {
               <input
                 type="password"
                 required
+                autoComplete="current-password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="••••••••"

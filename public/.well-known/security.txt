@@ -1,0 +1,6 @@
+Contact: mailto:basesixstudio@gmail.com
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: pt-BR, pt, en
+Canonical: https://www.base6studio.com.br/.well-known/security.txt
+Policy: https://www.base6studio.com.br/
+Acknowledgments: https://www.base6studio.com.br/

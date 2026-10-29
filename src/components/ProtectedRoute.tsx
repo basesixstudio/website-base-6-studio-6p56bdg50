@@ -18,6 +18,23 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ children }) => {
       setIsAuthenticated(pb.authStore.isValid)
     })
 
+    // Validação ativa do token com verificação de expiração
+    if (pb.authStore.isValid) {
+      // Se tiver token decodificável, checar expiração
+      const token = pb.authStore.token
+      try {
+        const payload = JSON.parse(atob(token.split('.')[1] || '{}'))
+        if (payload.exp && payload.exp * 1000 < Date.now()) {
+          pb.authStore.clear()
+          setIsAuthenticated(false)
+          setChecking(false)
+          return
+        }
+      } catch {
+        // Token não é JWT ou parsing falhou, deixar pb.authStore.isValid decidir
+      }
+    }
+
     setIsAuthenticated(pb.authStore.isValid)
     setChecking(false)
 

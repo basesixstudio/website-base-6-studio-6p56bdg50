@@ -77,6 +77,7 @@ export const RecuperarSenha: React.FC = () => {
                 <input
                   type="email"
                   required
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="basesixstudio@gmail.com"
