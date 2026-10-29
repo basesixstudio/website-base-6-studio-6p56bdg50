@@ -53,3 +53,20 @@ onRecordCreate((e) => {
 
   e.next()
 }, 'contatos')
+
+// Rota pública RFC 9116 /.well-known/security.txt
+// Servida diretamente pelo backend em text/plain; charset=utf-8
+routerAdd('GET', '/.well-known/security.txt', (e) => {
+  const content = [
+    'Contact: mailto:basesixstudio@gmail.com',
+    'Expires: 2027-12-31T23:59:59.000Z',
+    'Preferred-Languages: pt-BR, pt, en',
+    'Canonical: https://www.base6studio.com.br/.well-known/security.txt',
+    'Policy: https://www.base6studio.com.br/',
+    'Acknowledgments: https://www.base6studio.com.br/',
+  ].join('\n')
+
+  e.response.header().set('Content-Type', 'text/plain; charset=utf-8')
+  e.response.header().set('Cache-Control', 'public, max-age=3600')
+  return e.string(200, content)
+})
